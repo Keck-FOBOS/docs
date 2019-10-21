@@ -1,4 +1,4 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{8}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Barnes} et~al.(2018){Barnes}, {Ball}, {Starr}, {Seagroves}, {Perez},
@@ -9,45 +9,6 @@
   \& Exposition\/}, ASEE Conferences, Salt Lake City, Utah, 2018,
   https://peer.asee.org/31030
 
-\bibitem[{Borne} et~al.(2009){Borne}, {Accomazzi}, {Bloom}, {Brunner}, {Burke},
-  {Butler}, {Chernoff}, {Connolly}, {Connolly}, {Connors}, {Cutler}, {Desai},
-  {Djorgovski}, {Feigelson}, {Finn}, {Freeman}, {Graham}, {Gray}, {Graziani},
-  {Guinan}, {Hakkila}, {Jacoby}, {Jefferys}, {Kashyap}, {Kelly}, {Knuth},
-  {Lamb}, {Lee}, {Loredo}, {Mahabal}, {Mateo}, {McCollum}, {Muench},
-  {Pesenson}, {Petrosian}, {Primini}, {Protopapas}, {Ptak}, {Quashnock},
-  {Raddick}, {Rocha}, {Ross}, {Rottler}, {Scargle}, {Siemiginowska}, {Song},
-  {Szalay}, {Tyson}, {Vestrand}, {Wallin}, {Wandelt}, {Wasserman}, {Way},
-  {Weinberg}, {Zezas}, {Anderes}, {Babu}, {Becla}, {Berger}, {Bickel}, {Clyde},
-  {Davidson}, {van Dyk}, {Eastman}, {Efron}, {Genovese}, {Gray}, {Jang},
-  {Kolaczyk}, {Kubica}, {Loh}, {Meng}, {Moore}, {Morris}, {Park}, {Pike},
-  {Rice}, {Richards}, {Ruppert}, {Saito}, {Schafer}, {Stark}, {Stein}, {Sun},
-  {Wang}, {Wang}, {Wasserman}, {Wegman}, {Willett}, {Wolpert}, and
-  {Woodroofe}]{borne09}
-{Borne}, K; {Accomazzi}, A; {Bloom}, J; {Brunner}, R; {Burke}, D; {Butler}, N;
-  {Chernoff}, DF; {Connolly}, B; {Connolly}, A; {Connors}, A; {Cutler}, C;
-  {Desai}, S; {Djorgovski}, G; {Feigelson}, E; {Finn}, LS; {Freeman}, P;
-  {Graham}, M; {Gray}, N; {Graziani}, C; {Guinan}, EF; {Hakkila}, J; {Jacoby},
-  S; {Jefferys}, W; {Kashyap}; {Kelly}, B; {Knuth}, K; {Lamb}, DQ; {Lee}, H;
-  {Loredo}, T; {Mahabal}, A; {Mateo}, M; {McCollum}, B; {Muench}, A;
-  {Pesenson}, M; {Petrosian}, V; {Primini}, F; {Protopapas}, P; {Ptak}, A;
-  {Quashnock}, J; {Raddick}, MJ; {Rocha}, G; {Ross}, N; {Rottler}, L;
-  {Scargle}, J; {Siemiginowska}, A; {Song}, I; {Szalay}, A; {Tyson}, JA;
-  {Vestrand}, T; {Wallin}, J; {Wandelt}, B; {Wasserman}, IM; {Way}, M;
-  {Weinberg}, M; {Zezas}, A; {Anderes}, E; {Babu}, J; {Becla}, J; {Berger}, J;
-  {Bickel}, PJ; {Clyde}, M; {Davidson}, I; {van Dyk}, D; {Eastman}, T; {Efron},
-  B; {Genovese}, C; {Gray}, A; {Jang}, W; {Kolaczyk}, ED; {Kubica}, J; {Loh},
-  JM; {Meng}, XL; {Moore}, A; {Morris}, R; {Park}, T; {Pike}, R; {Rice}, J;
-  {Richards}, J; {Ruppert}, D; {Saito}, N; {Schafer}, C; {Stark}, PB; {Stein},
-  M; {Sun}, J; {Wang}, D; {Wang}, Z; {Wasserman}, L; {Wegman}, EJ; {Willett},
-  R; {Wolpert}, R; {Woodroofe}, M. ``{Astroinformatics: A 21st Century Approach
-  to Astronomy},'' In {\em astro2010: The Astronomy and Astrophysics Decadal
-  Survey\/}, v. 2010, 2009, p.~P6
-
-\bibitem[Council(2015)]{NAP21722}
-Council, NR. {\em Optimizing the U.S. Ground-Based Optical and Infrared
-  Astronomy System\/}, The National Academies Press, Washington, DC, ISBN
-  978-0-309-37186-5, 2015
-
 \bibitem[{Cunningham} et~al.(2018){Cunningham}, {Deason}, {Rockosi},
   {Guhathakurta}, {Jennings}, {Kirby}, {Toloba}, and
   {Barro}]{2018arXiv180904082C}
@@ -55,31 +16,6 @@ Council, NR. {\em Optimizing the U.S. Ground-Based Optical and Infrared
   ZG; {Kirby}, EN; {Toloba}, E; {Barro}, G. ``{HALO7D I: The Line of Sight
   Velocities of Distant Main Sequence Stars in the Milky Way Halo},'' {\em
   arXiv e-prints\/}, 2018, p. arXiv:1809.04082
-
-\bibitem[{Hemmati} et~al.(2018){Hemmati}, {Capak}, {Masters}, {Davidzon},
-  {Dore}, {Mobasher}, {Rhodes}, {Scolnic}, and {Stern}]{hemmati18}
-{Hemmati}, S; {Capak}, P; {Masters}, D; {Davidzon}, I; {Dore}, O; {Mobasher},
-  B; {Rhodes}, J; {Scolnic}, D; {Stern}, D. ``{Photometric redshift calibration
-  requirements for WFIRST Weak Lensing Cosmology: Predictions from CANDELS},''
-  {\em arXiv e-prints\/}, 2018
-
-\bibitem[{Laureijs} et~al.(2011){Laureijs}, {Amiaux}, {Arduini},
-  {Augu{\`e}res}, {Brinchmann}, {Cole}, {Cropper}, {Dabin}, {Duvet}, {Ealet},
-  and et~al.]{laureijs11}
-{Laureijs}, R; {Amiaux}, J; {Arduini}, S; {Augu{\`e}res}, J; {Brinchmann}, J;
-  {Cole}, R; {Cropper}, M; {Dabin}, C; {Duvet}, L; {Ealet}, A; et~al. ``{Euclid
-  Definition Study Report},'' {\em arXiv e-prints\/}, 2011
-
-\bibitem[{Masters} et~al.(2015){Masters}, {Capak}, {Stern}, {Ilbert},
-  {Salvato}, {Schmidt}, {Longo}, {Rhodes}, {Paltani}, {Mobasher}, {Hoekstra},
-  {Hildebrandt}, {Coupon}, {Steinhardt}, {Speagle}, {Faisst}, {Kalinich},
-  {Brodwin}, {Brescia}, and {Cavuoti}]{masters15}
-{Masters}, D; {Capak}, P; {Stern}, D; {Ilbert}, O; {Salvato}, M; {Schmidt}, S;
-  {Longo}, G; {Rhodes}, J; {Paltani}, S; {Mobasher}, B; {Hoekstra}, H;
-  {Hildebrandt}, H; {Coupon}, J; {Steinhardt}, C; {Speagle}, J; {Faisst}, A;
-  {Kalinich}, A; {Brodwin}, M; {Brescia}, M; {Cavuoti}, S. ``{Mapping the
-  Galaxy Color-Redshift Relation: Optimal Photometric Redshift Calibration
-  Strategies for Cosmology Surveys},'' {\em \apj\/}, v. 813, 2015, p.~53
 
 \bibitem[{Ness} et~al.(2015){Ness}, {Hogg}, {Rix}, {Ho}, and
   {Zasowski}]{2015ApJ...808...16N}

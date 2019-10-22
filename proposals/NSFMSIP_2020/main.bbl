@@ -1,4 +1,4 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{9}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Barnes} et~al.(2018){Barnes}, {Ball}, {Starr}, {Seagroves}, {Perez},
@@ -16,6 +16,16 @@
   ZG; {Kirby}, EN; {Toloba}, E; {Barro}, G. ``{HALO7D I: The Line of Sight
   Velocities of Distant Main Sequence Stars in the Milky Way Halo},'' {\em
   arXiv e-prints\/}, 2018, p. arXiv:1809.04082
+
+\bibitem[{Masters} et~al.(2019){Masters}, {Stern}, {Cohen}, {Capak},
+  {Stanford}, {Hernitschek}, {Galametz}, {Davidzon}, {Rhodes}, {Sand ers},
+  {Mobasher}, {Castander}, {Pruett}, and {Fotopoulou}]{masters19}
+{Masters}, DC; {Stern}, DK; {Cohen}, JG; {Capak}, PL; {Stanford}, SA;
+  {Hernitschek}, N; {Galametz}, A; {Davidzon}, I; {Rhodes}, JD; {Sand ers}, D;
+  {Mobasher}, B; {Castander}, F; {Pruett}, K; {Fotopoulou}, S. ``{The Complete
+  Calibration of the Color-Redshift Relation (C3R2) Survey: Analysis and Data
+  Release 2},'' {\em arXiv e-prints\/}, 2019, p. arXiv:1904.06394.
+  \url{https://ui.adsabs.harvard.edu/abs/2019arXiv190406394M}
 
 \bibitem[{Ness} et~al.(2015){Ness}, {Hogg}, {Rix}, {Ho}, and
   {Zasowski}]{2015ApJ...808...16N}

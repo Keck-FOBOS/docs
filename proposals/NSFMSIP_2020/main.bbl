@@ -1,4 +1,4 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{6}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Barnes} et~al.(2018){Barnes}, {Ball}, {Starr}, {Seagroves}, {Perez},
@@ -9,13 +9,25 @@
   \& Exposition\/}, ASEE Conferences, Salt Lake City, Utah, 2018,
   https://peer.asee.org/31030
 
-\bibitem[{Cunningham} et~al.(2018){Cunningham}, {Deason}, {Rockosi},
-  {Guhathakurta}, {Jennings}, {Kirby}, {Toloba}, and
-  {Barro}]{2018arXiv180904082C}
-{Cunningham}, EC; {Deason}, AJ; {Rockosi}, CM; {Guhathakurta}, P; {Jennings},
-  ZG; {Kirby}, EN; {Toloba}, E; {Barro}, G. ``{HALO7D I: The Line of Sight
-  Velocities of Distant Main Sequence Stars in the Milky Way Halo},'' {\em
-  arXiv e-prints\/}, 2018, p. arXiv:1809.04082
+\bibitem[{Dorman} et~al.(2012){Dorman}, {Guhathakurta}, {Fardal}, {Lang},
+  {Geha}, {Howley}, {Kalirai}, {Bullock}, {Cuilland re}, {Dalcanton},
+  {Gilbert}, {Seth}, {Tollerud}, {Williams}, and {Yniguez}]{dorman12}
+{Dorman}, CE; {Guhathakurta}, P; {Fardal}, MA; {Lang}, D; {Geha}, MC; {Howley},
+  KM; {Kalirai}, JS; {Bullock}, JS; {Cuilland re}, JC; {Dalcanton}, JJ;
+  {Gilbert}, KM; {Seth}, AC; {Tollerud}, EJ; {Williams}, BF; {Yniguez}, B.
+  ``{The SPLASH Survey: Kinematics of Andromeda's Inner Spheroid},'' {\em
+  \apj\/}, v. 752(2), 2012, p. 147.
+  \url{https://ui.adsabs.harvard.edu/abs/2012ApJ...752..147D}
+
+\bibitem[{Lee} et~al.(2016){Lee}, {Hennawi}, {White}, {Prochaska},
+  {Font-Ribera}, {Schlegel}, {Rich}, {Suzuki}, {Stark}, {Le F{\`e}vre},
+  {Nugent}, {Salvato}, and {Zamorani}]{lee16}
+{Lee}, KG; {Hennawi}, JF; {White}, M; {Prochaska}, JX; {Font-Ribera}, A;
+  {Schlegel}, DJ; {Rich}, RM; {Suzuki}, N; {Stark}, CW; {Le F{\`e}vre}, O;
+  {Nugent}, PE; {Salvato}, M; {Zamorani}, G. ``{Shadow of a Colossus: A z =
+  2.44 Galaxy Protocluster Detected in 3D Ly{$\alpha$} Forest Tomographic
+  Mapping of the COSMOS Field},'' {\em \apj\/}, v. 817, 2016, p. 160.
+  \url{https://ui.adsabs.harvard.edu/abs/2016ApJ...817..160L}
 
 \bibitem[{Masters} et~al.(2019){Masters}, {Stern}, {Cohen}, {Capak},
   {Stanford}, {Hernitschek}, {Galametz}, {Davidzon}, {Rhodes}, {Sand ers},
@@ -26,12 +38,6 @@
   Calibration of the Color-Redshift Relation (C3R2) Survey: Analysis and Data
   Release 2},'' {\em arXiv e-prints\/}, 2019, p. arXiv:1904.06394.
   \url{https://ui.adsabs.harvard.edu/abs/2019arXiv190406394M}
-
-\bibitem[{Ness} et~al.(2015){Ness}, {Hogg}, {Rix}, {Ho}, and
-  {Zasowski}]{2015ApJ...808...16N}
-{Ness}, M; {Hogg}, DW; {Rix}, HW; {Ho}, AYQ; {Zasowski}, G. ``{The Cannon: A
-  data-driven approach to Stellar Label Determination},'' {\em \apj\/}, v. 808,
-  2015, p.~16
 
 \bibitem[{Newman} et~al.(2015){Newman}, {Abate}, {Abdalla}, {Allam}, {Allen},
   {Ansari}, {Bailey}, {Barkhouse}, {Beers}, {Blanton}, {Brodwin}, {Brownstein},
@@ -74,21 +80,5 @@
   DJ; {Metevier}, A; {Schiavon}, RP. ``{The DEEP2 Galaxy Redshift Survey:
   Design, Observations, Data Reduction, and Redshifts},'' {\em \apjs\/}, v.
   208, 2013, p.~5
-
-\bibitem[{Sanderson} et~al.(2017){Sanderson}, {Hartke}, and
-  {Helmi}]{2017ApJ...836..234S}
-{Sanderson}, RE; {Hartke}, J; {Helmi}, A. ``{Modeling the Gravitational
-  Potential of a Cosmological Dark Matter Halo with Stellar Streams},'' {\em
-  \apj\/}, v. 836, 2017, p. 234
-
-\bibitem[{Ting} et~al.(2018){Ting}, {Conroy}, {Rix}, and
-  {Cargile}]{2018arXiv180401530T}
-{Ting}, YS; {Conroy}, C; {Rix}, HW; {Cargile}, P. ``{The Payne: self-consistent
-  ab initio fitting of stellar spectra},'' {\em arXiv e-prints\/}, 2018, p.
-  arXiv:1804.01530
-
-\bibitem[{Ting} \& {Rix}(2018){Ting} and {Rix}]{2018arXiv180803278T}
-{Ting}, YS; {Rix}, HW. ``{The vertical motion history of disk stars throughout
-  the Galaxy},'' {\em arXiv e-prints\/}, 2018, p. arXiv:1808.03278
 
 \end{thebibliography}

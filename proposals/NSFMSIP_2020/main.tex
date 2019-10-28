@@ -425,12 +425,10 @@ and substructure that have so far been limited to Milky Way and its surroundings
 %
 \vskip -0.1in
 %
-\includegraphics[width=\textwidth]{figs/FOBOS_inst.pdf}
+\includegraphics[width=\textwidth]{figs/FOBOS_inst_2019-10-28.pdf}
 %
 \caption{\small {\it Left}: Rendering of FOBOS instrument systems
-deployed at the Keck II Nasmyth port.  By mounting the FOBOS
-spectrographs under the Nasmyth platform, other instruments like DEIMOS
-can maintain access to the telescope. {\it Right}: Rendering of one of
+deployed at the Keck II Nasmyth port.  {\it Right}: Optical layout of one of
 the three four-armed FOBOS spectrographs.}
 %
 \label{fig:layout}
@@ -446,43 +444,36 @@ desired targets.  The risk of Starbugs adhesion loss and drops is significantly 
 surface, which preserves a normal gravity vector for the Starbugs and, because they are mounted on top, reduces each
 bugs' vacuum adhesion requirements.  The focal surface rotates as the telescope tracks.  Starbugs can patrol zones up to several arcminutes and can be placed as close as 10\arcsec{}.  Back illumination combined with a fast, imaging metrology camera enables reconfiguration times down to 2 minutes. 
 
-\noindent \textbf{Spectrographs.} The stress-relieving fiber run to FOBOS's three adjacent spectrographs is kept short ($< 10$m) to
-preserve throughput at UV wavelengths.  Each spectrograph uses dichroics to divide the 140 mm diameter collimated beam
-into four wavelength channels with combined, instantaneous coverage from 0.31--1 $\mu$m.  Fused-silica etched (FSE)
-gratings provide mid-channel spectral resolutions of $R \sim 3500$ at high diffraction efficiency in each channel.  The
-dispersed light is focused by f/2.25 refractive cameras\footnote{Based on the camera design for the DESI
-spectrographs.} and recorded by 6k$\times$6k CCDs with 15 $\mu$m pixels and 5-pixel sampling of the fiber diameter.
-Spectrographs are mounted in a temperature-controlled housing on the Nasmyth Deck.  The end-to-end instrument
-throughput peaks at 60\% and is greater than 30\% at all wavelengths.
+\noindent \textbf{Spectrographs.} Three spectrographs adjacent to the focal plane module are fed by a short ($< 10$m)
+stress-relieving fiber run in order to preserve UV throughput.  Each spectrograph uses dichroics to divide the 140 mm
+diameter collimated beam into four wavelength channels with combined, instantaneous coverage from 0.31--1 $\mu$m.
+Fused-silica etched (FSE) gratings provide mid-channel spectral resolutions of $R \sim 3500$ at high diffraction
+efficiency in each channel.  The dispersed light is focused by f/2.25 refractive cameras\footnote{Based on the camera
+design for the DESI spectrographs.} and recorded by 6k$\times$6k CCDs with 15 $\mu$m pixels and 5-pixel sampling of the
+fiber diameter. The spectrographs are mounted in a temperature-controlled housing on the Nasmyth Deck.  The estimated
+end-to-end instrument throughput peaks at 60\% and is greater than 30\% at all wavelengths.
 
 
-\noindent \textbf{Observing modes.}
+\noindent \textbf{Targeting modes.} FOBOS deploys a total of 1800 fibers.  Fore-optics on the front end of each fiber demagnify and speed up the beam (from f/15 to f/5) for better
+coupling to the fiber numerical aperture and to minimize losses from focal ratio degradation.  The nominal sky sampling
+of each fiber is 0.8\arcsec{} (diameter).  A day-time procedure switches between different targeting modes for each
+spectrograph: 1) individual fibers, 600 per spectrograph; 2) A set of 15 multiplexed fiber-bundle IFUs (per
+spectrograph), each composed of 37 fibers and spanning up to 5.6\arcsec{}; 3) A 30\arcsec{}-wide monolithic IFU (1641
+fibers).  In all cases, $\sim$10\% of individual fibers are reserved for sky sampling and 5--10 7-fiber mini-bundles
+collect standard stars for instantaneous flux calibration.  The design will accept and take advantage of ground-layer adaptive optics (GLAO) corrections should a GLAO system be deployed at Keck II.
 
 
-A total of 1800 150-$\mu$m core diameter fibers are deployed at the curved focal plane.  Fore-optics on the front end
-of each fiber demagnify and speed up the beam (from f/15 to f/5) for better coupling to the fiber numerical aperture
-and to minimize losses from focal ratio degradation.  The focal plane plate rotates and translates to follow image
-positions as the telescope tracks across the sky.  
+\noindent \textbf{Calibration System.} Stability and the limitation of potential instrument systematics demand a
+precise calibration system.  Afternoon flat-field and arc-line exposures will use a carefully-illuminated interior dome
+screen.  Nighttime calibrations involve rotating the fold mirror towards a pupil injection system adjacent to the focal
+plane module.  Absolute flat-field measurements in the afternoon and relative fiber-to-fiber measurements from
+nighttime calibrations will be combined to model the instrument$+$sky response during observations.
 
-Sets of 600 fibers feed each of three identical spectrographs (Fig
-\ref{fig:layout}).  
-%\comment{compare to PEP}.
-
-FOBOS includes observatory level systems for precise instrument
-calibration using dome-interior screen illumination, a metrology system
-for accurate fiber positioning, and guide cameras for field acquisition
-and guiding.  The instrument design envisions future upgrades including
-alternate collecting modes that deploy multiple fiber bundles, feeds to
-other fiber-based spectrographs at different wavelengths or spectral
-resolutions, and the ability to support and benefit from image
-corrections with Ground-Layer Adaptive Optics.
 
 \subsection{FOBOS Instrument Design Effort}
 \label{sec:design}
 
-FOBOS will complete its current conceptual design phase in fall 2019. Funding from this proposal will support the next
-phase of Preliminary Design.  A schedule of milestones and additional information is provided in the Project
-Execution Plan (PEP).  Major components of the Preliminary Design effort are described below.
+Major components of the Preliminary Design effort are described below.
 
 \noindent \textbf{Atmospheric Dispersion Compensator (ADC):} The
 opto-mechanical design, tolerancing, lens cell design, motion systems,

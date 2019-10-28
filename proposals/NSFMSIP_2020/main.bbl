@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Barnes} et~al.(2018){Barnes}, {Ball}, {Starr}, {Seagroves}, {Perez},
@@ -28,6 +28,17 @@
   2.44 Galaxy Protocluster Detected in 3D Ly{$\alpha$} Forest Tomographic
   Mapping of the COSMOS Field},'' {\em \apj\/}, v. 817, 2016, p. 160.
   \url{https://ui.adsabs.harvard.edu/abs/2016ApJ...817..160L}
+
+\bibitem[{Masters} et~al.(2015){Masters}, {Capak}, {Stern}, {Ilbert},
+  {Salvato}, {Schmidt}, {Longo}, {Rhodes}, {Paltani}, {Mobasher}, {Hoekstra},
+  {Hildebrandt}, {Coupon}, {Steinhardt}, {Speagle}, {Faisst}, {Kalinich},
+  {Brodwin}, {Brescia}, and {Cavuoti}]{masters15}
+{Masters}, D; {Capak}, P; {Stern}, D; {Ilbert}, O; {Salvato}, M; {Schmidt}, S;
+  {Longo}, G; {Rhodes}, J; {Paltani}, S; {Mobasher}, B; {Hoekstra}, H;
+  {Hildebrandt}, H; {Coupon}, J; {Steinhardt}, C; {Speagle}, J; {Faisst}, A;
+  {Kalinich}, A; {Brodwin}, M; {Brescia}, M; {Cavuoti}, S. ``{Mapping the
+  Galaxy Color-Redshift Relation: Optimal Photometric Redshift Calibration
+  Strategies for Cosmology Surveys},'' {\em \apj\/}, v. 813, 2015, p.~53
 
 \bibitem[{Masters} et~al.(2019){Masters}, {Stern}, {Cohen}, {Capak},
   {Stanford}, {Hernitschek}, {Galametz}, {Davidzon}, {Rhodes}, {Sand ers},

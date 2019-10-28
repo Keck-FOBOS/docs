@@ -187,6 +187,41 @@ Based on science requirements derived from reference-mission key programs, we pr
 
 As part of the work we propose here, NSF's OIR Lab will solicit additional key program concepts from the U.S. community, host workshops to discuss and refine these concepts, and coordinate proposing teams ahead of a competed selection process to define design-reference programs in support of Preliminary and Final Design.
 
+
+
+Our team includes leading experts on data science applications to
+astronomy and, specifically, LSST.  We will also use our established
+connections to LSST's Informatics and Statistics Science Collaboration
+(ISSC) to advertise, recruit, and coordinate efforts to tackle the Data
+Science Challenges described in Section \ref{sec:goals}.  Our proposal
+request includes two community workshops to motivate progress and discuss
+results. At the end of the proposal period, we will publish the results
+and developed software packages.
+
+Our data-science challenges require work on simulated
+imaging$+$spectroscopic data sets where input physical properties (e.g.,
+redshift) can be compared to output recovered values.  Simulated imaging
+data (e.g., from LSST and WFIRST) are in-hand, while mock spectroscopy
+will be provided by a FOBOS instrument simulator, an initial version of
+which has already been developed.  Further advances to be supported by
+this proposal include improved error modeling and simulating systematic
+effects from detector artifacts, image quality aberrations informed by
+the emerging detailed optical design, and variable observing conditions.
+
+While the FOBOS data simulator is required for our data-science challenges, it also forms the basis of a delivered data
+reduction pipeline (DRP) for this instrument.  This software will provide both the quick reduction assessments needed
+for dynamic targeting, as well as full reductions for scientific analysis.  In the proposal period, we will also develop a preliminary design for a data analysis
+pipeline (DAP).  Unique among Keck instruments, the FOBOS DAP will take advantage of the fixed spectral format and common target classes to provide high-level data products, including
+Doppler shift, emission-line strengths, and template continuum fits (cf.,
+Westfall et al.; SDSS-IV MaNGA DAP).  The DAP will also produce results from relevant machine-learning applications (e.g., redshifts at low-S/N).
+
+Raw data, reduced spectra, and high-level DAP science products will be
+publicly delivered via user-friendly platforms built on the Keck Observatory Archive.  After associated
+proprietary periods, data will be served for {\it all} FOBOS observations, creating a rich legacy data set for the astronomical community.  Both program PIs
+and the larger community will be encouraged to develop the DRP and DAP
+to meet the needs of specific science applications.  These software
+packages will be open source and publicly served (e.g., using GitHub).
+
 % \subsection{Research Community Priority} 
 % \label{sec:community}
 
@@ -438,6 +473,8 @@ the three four-armed FOBOS spectrographs.}
 %
 \end{figure}
 
+We summarize major FOBOS sub-systems below based on the current conceptual design.  We propose to advance all components to a state of Preliminary Design readiness.  Our risk register assigns the highest risk levels to 1) Starbugs positioners (adhesion and control), 2) Micro fore-optics at the fiber input (alignment and process control), 3) Calibration system performance (uniformity and stability).
+
 \noindent \textbf{Focal Plane System.} Mounted at the Nasmyth focus of Keck II Telescope at WMKO (Fig \ref{fig:layout}), FOBOS is a modular instrument
 composed of several major system.  Telescope light passes through the first two 946 mm diameter lenses of a 3-lens
 compensating lateral atmospheric dispersion corrector (CLADC) before encountering a 45$^\circ$ mirror that folds the
@@ -446,6 +483,14 @@ as the mounting plate for a complement of Starbugs that roam its upper surface, 
 desired targets.  The risk of Starbugs adhesion loss and drops is significantly reduced by the fixed horizontal focal
 surface, which preserves a normal gravity vector for the Starbugs and, because they are mounted on top, reduces each
 bugs' vacuum adhesion requirements.  The focal surface rotates as the telescope tracks.  Starbugs can patrol zones up to several arcminutes and can be placed as close as 10\arcsec{}.  Back illumination combined with a fast, imaging metrology camera enables reconfiguration times down to 2 minutes. 
+
+
+%  \begin{enumerate}[rightmargin=0.2cm,leftmargin=0.2cm]
+
+%   \item[] \emph{Preparatory Work}: $\bullet$ Initial CLADC optical design $\bullet$ Nasmyth mount space envelope defined $\bullet$ Increased telescope focal length solutions $\bullet$ Starbugs requirements definition $\bullet$ Starbugs performance analysis
+%   \item[] \emph{Proposed Work}: $\bullet$ CLADC opto-mechanical system through PDR $\bullet$ Starbugs system implementation through PDR 
+
+% \end{enumerate}
 
 \noindent \textbf{Spectrographs.} Three spectrographs adjacent to the focal plane module are fed by a short ($< 10$m)
 stress-relieving fiber run in order to preserve UV throughput.  Each spectrograph uses dichroics to divide the 140 mm
@@ -457,8 +502,8 @@ fiber diameter. The spectrographs are mounted in a temperature-controlled housin
 end-to-end instrument throughput peaks at 60\% and is greater than 30\% at all wavelengths.
 
 
-\noindent \textbf{Targeting modes.} FOBOS deploys a total of 1800 fibers.  Fore-optics on the front end of each fiber demagnify and speed up the beam (from f/15 to f/5) for better
-coupling to the fiber numerical aperture and to minimize losses from focal ratio degradation.  The nominal sky sampling
+\noindent \textbf{Focal Plane Sampling.} FOBOS deploys a total of 1800 fibers.  Fore-optics on the front end of each fiber demagnify and speed up the beam (from f/15 to f/5) for better
+coupling to the fiber numerical aperture and to minimize losses from focal ratio degradation (microlens arrays accomplish this for the fiber bundles).  The nominal sky sampling
 of each fiber is 0.8\arcsec{} (diameter).  A day-time procedure switches between different targeting modes for each
 spectrograph: 1) individual fibers, 600 per spectrograph; 2) A set of 15 multiplexed fiber-bundle IFUs (per
 spectrograph), each composed of 37 fibers and spanning up to 5.6\arcsec{}; 3) A 30\arcsec{}-wide monolithic IFU (1641
@@ -472,135 +517,32 @@ screen.  Nighttime calibrations involve rotating the fold mirror towards a pupil
 plane module.  Absolute flat-field measurements in the afternoon and relative fiber-to-fiber measurements from
 nighttime calibrations will be combined to model the instrument$+$sky response during observations.
 
+\noindent \textbf{Data Management System.} All software related to observational planning, data collection, processing, and serving.  An API communicates between major sub-systems.  \emph{The Doctor}: A database of metadata and performance metrics as well as analysis software to monitor instrument health and predict performance.  \emph{The Producer}: Planning, simulation, and execution of integrated, multiple-pointing observing programs based on MAISTRO\footnote{MAISTRO: Modular
+Artificial Intelligence System for Target Reallocation and Observing.}, an ``artificial intelligence'' (AI) targeting
+system that will learn optimization strategies for assigning targets defined by the Lead Observer as well as a database
+containing overlapping and prioritized programs.  \emph{The Accountant}: A data-reduction pipeline with runtime options
+for both quick-look and science-ready reductions. \emph{The Alchemist}: Automated derivation of high-level data products (e.g.,
+redshifts). \emph{The Curator}: An archive of all data and data products as well as a dynamic interface and
+science platform for visualization and analysis.
 
-\subsection{FOBOS Instrument Design Effort}
-\label{sec:design}
-
-Major components of the Preliminary Design effort are described below.
-
-\noindent \textbf{Atmospheric Dispersion Compensator (ADC):} The
-opto-mechanical design, tolerancing, lens cell design, motion systems,
-and software-control design of the ADC will be completed.  
-
-\noindent \textbf{Focal Plane System:} Mechanical design, including flexure analysis and
-the selection of drive mechanisms and potential vendors will be
-completed.  This system also defines one of the interfaces to the Keck
-II Telescope and must comply with WMKO space envelopes, servicing needs,
-and other requirements.  The focal plane system also includes the
-guide cameras.
-
-\noindent \textbf{Starbugs fiber positioners:} Starbugs are a
-positioning technology developed and deployed by the Australian
-Astronomical Observatory (AAO), which has partnered with our team to
-generate a conceptual design for use of Starbugs by FOBOS.  Design
-requirements for Starbugs in FOBOS are more relaxed than the currently
-on-sky TAIPAN instrument thanks to the larger physical plate scale at
-Keck.  
-
-\noindent \textbf{Fiber System:} We will complete the optical design and
-processing plan for affixing forward optics lenses to each fiber head.  A
-micro-lens array solution will be developed for a central,
-fixed-position 4.5-arcsec diameter IFU for fast source acquisition. This
-work package also includes the stress-relief cable system and fiber
-termination hardware and processing.
-
-\noindent \textbf{Spectrographs.} The optical systems and components
-(slit, collimator, dichroics, gratings, and camera), an analysis of
-acceptable tolerances and performance, their mechanical supports,
-software controls, and the overall enclosure will all be advanced
-through Preliminary Design.  Detectors, cryostats, read-out electronics
-and systems for thermal management will be designed.
-
-% Put the calibration system back in?
-% \noindent \textbf{Calibration System.} This package includes design of an interior dome screen and projection system for injecting calibration sources with sufficient spatial uniformity and stability into the instrument.  We will work with the Observatory to develop an integration and controls plan.  No such calibration system currently exists at Keck.
-
-% \noindent \textbf{Auxiliary Systems.} Design of auxiliary systems includes Nasmyth platform interfaces, utilities access, fiber routing and support, thermal control and vibration control systems.
-
-\subsection{Addressing Data Science Challenges and Designing FOBOS Training Sets}
-\label{sec:survey}
-
-Our team includes leading experts on data science applications to
-astronomy and, specifically, LSST.  We will also use our established
-connections to LSST's Informatics and Statistics Science Collaboration
-(ISSC) to advertise, recruit, and coordinate efforts to tackle the Data
-Science Challenges described in Section \ref{sec:goals}.  Our proposal
-request includes two community workshops to motivate progress and discuss
-results. At the end of the proposal period, we will publish the results
-and developed software packages.
-
-Our data-science challenges require work on simulated
-imaging$+$spectroscopic data sets where input physical properties (e.g.,
-redshift) can be compared to output recovered values.  Simulated imaging
-data (e.g., from LSST and WFIRST) are in-hand, while mock spectroscopy
-will be provided by a FOBOS instrument simulator, an initial version of
-which has already been developed.  Further advances to be supported by
-this proposal include improved error modeling and simulating systematic
-effects from detector artifacts, image quality aberrations informed by
-the emerging detailed optical design, and variable observing conditions.
-
-The resulting success in addressing each data-science challenge will
-define a level of readiness and set requirements on desired FOBOS
-training sets, including number of sources, pointings, magnitude limits,
-signal-to-noise thresholds, and observing conditions.  Preliminary
-observing design and a description of required operational modes to
-efficiently observe these training sets will begin with this proposal.
-Operational modes will set requirements on target aggregation and
-prioritization systems, field acquisition speed, field rotation range,
-zenith avoidance zone, reconfiguration time, calibrations, read-out
-time, quick-look reduction software and processing rates.  We will
-develop integrated program concepts that efficiently combine required
-observations.  Detailed survey and execution plans will be completed in
-the next phase of this project (MSRI-2).  Roughly 20\% of Keck observing
-time is open to the public, and as in previous federally-funded
-projects, we fully expect that Senior Personnel at Keck institutions
-will be successful in collaborative efforts to secure significant
-amounts of additional telescope observing time to enable rapid, public
-release of FOBOS training data \citep[e.g.,][]{newman13}.
-
-% The complete photo-$z$ training survey described in \citet{newman15}
-% would require 15 independent pointings, each spanning 0.1 deg$^2$ with
-% a target density of 6 arcmin$^{-2}$ (8 arcmin$^{-2}$ when including $z
-% > 1.5$ galaxies accessible in the UV with Keck-FOBOS), perfectly
-% matched to the Keck-FOBOS field-of-view and target density.  With a
-% conservative exposure time of 100 hours to reach 75\% redshift
-% completeness for 40,000 galaxies with $i_{\rm AB} < 25.3$, the Neman
-% survey would require 400 nights.  Challenge \ref{photoz} would reduce
-% the required survey duration by a factor of at least four.  Meanwhile
-% the extreme depths and flux-limited selection are likely also
-% requirements for training sets associated with Challenges \ref{phot},
-% \ref{uv}.
-
-% A wider and shallower survey component is envisioned for Challenges
-% \ref{lowsnr} and \ref{gaia}.  With 10-minute integrations, a 52
-% deg$^2$ Keck-FOBOS sample of environmental diagnostics for 1 million
-% galaxies could be carried out in less than 20 nights.  This program
-% would sample at $z \sim 1.5$ the same cosmic volume as SDSS.  A
-% program of a similar scale would provide training set data for
-% inference of stellar parameters in the Milky Way.  These shallow
-% programs would be integrated with the deeper components described
-% above into a single survey plan.
-
-\subsection{MAISTRO: Target Allocation with Artificial Intelligence}
-\label{sec:targeting}
-
-Powered by Starbugs fiber positioners, FOBOS will enable fast, dynamic
-reallocation of fibers.  To efficiently determine the best options given
-a wide range of possible targets and desired observing outcomes, we will
-develop a preliminary design for MAISTRO\footnote{MAISTRO: Modular
-Artificial Intelligence System for Target Reallocation and Observing.}
-an ``artificial intelligence'' (AI) targeting system that will learn
-optimization strategies for assigning targets from a database of
-overlapping observing programs with pre-defined priorities.  The AI
-package will aggregate data quality using a quick-look reduction
-package, science-driven performance metrics, {\it and real-time
-assessments of the observing conditions} to make dynamic targeting
-recommendations.  For example, if conditions are slightly less than
-optimal, MAISTRO would reconfigure Starbugs to brighter objects in a
-field or implement a different program prioritization.  MAISTRO will
-incorporate updated target lists and priorities from the active observer
-and could easily be over-ridden at any time.   Fractions of the full
-FOBOS multiplex might also be reserved ``manual targeting'' as required
-by the program PI.  
+% \noindent \textbf{MAISTRO: Target Allocation with Artificial Intelligence} Powered by Starbugs fiber positioners, FOBOS will enable fast, dynamic
+% reallocation of fibers.  To efficiently determine the best options given
+% a wide range of possible targets and desired observing outcomes, we will
+% develop a preliminary design for MAISTRO\footnote{MAISTRO: Modular
+% Artificial Intelligence System for Target Reallocation and Observing.}
+% an ``artificial intelligence'' (AI) targeting system that will learn
+% optimization strategies for assigning targets from a database of
+% overlapping observing programs with pre-defined priorities.  The AI
+% package will aggregate data quality using a quick-look reduction
+% package, science-driven performance metrics, {\it and real-time
+% assessments of the observing conditions} to make dynamic targeting
+% recommendations.  For example, if conditions are slightly less than
+% optimal, MAISTRO would reconfigure Starbugs to brighter objects in a
+% field or implement a different program prioritization.  MAISTRO will
+% incorporate updated target lists and priorities from the active observer
+% and could easily be over-ridden at any time.   Fractions of the full
+% FOBOS multiplex might also be reserved ``manual targeting'' as required
+% by the program PI.  
 
 %   - maintains a database with observational progress on individual
 %     targets in the survey and
@@ -622,32 +564,6 @@ by the program PI.
 
 
 
-
-\subsection{Management}
-
-
-% FOBOS has a detailed Project Management Plan (PEP) which follows guidelines outlined in Section 3 of the NSF Major Facilities Guide (NSF 19-XX Dec 2018).  The PEP is outlined at Level 1 for this pre-proposal.  Level one PEP outlines is as follows; 1. Introduction, 2.  Organization, 3.  Design and Development, 4.  Contraction project definition, 5.  Staffing, 6.  Risk and Opportunity Management, 6.  Systems Engineering, 7.  Configuration and Controls, 8.  Acquisitions, 9.  Project Management Controls, 10.  Site and Environment, 11.  Cyber-infrastructure, 12.  Environmental Safety and Health Plans, 13.  Reviews and Reporting, 14.  Commissioning, 15.  Project Closeout plan
-
-% Project management controls for this and future project phases is accomplished by low level task lists which are used to develop resource loaded schedules for determining both cost and duration.  This ‘bottom up’ approach allows for a detailed accounting of project cost and cash flow.  It allows for in process tracking trough earned value reporting, earned value will be calculated a minimum quarterly or when deemed necessary by the Project Manager.  Each sub-award institution is responsible for maintaining their own schedule and budget as well as reported earned value to the Project Manager.  A detailed Work Breakdown and Product Breakdown structure is in place to insure clear understand scope of delivered work and to insure well documented interfaces between systems.
-
-% Contingency for this proposal, funding of preliminary design, is set at 20\%.  As the project develops the contingency on future work and equipment will be set using a combination of basis of estimate and associated risk.  The process for contingency estimation is included in the detailed PEP.
-
-\subsection{Publicly Available Automated Data Products}
-\label{sec:DAP}
-
-While the FOBOS data simulator is required for our data-science challenges, it also forms the basis of a delivered data
-reduction pipeline (DRP) for this instrument.  This software will provide both the quick reduction assessments needed
-for dynamic targeting, as well as full reductions for scientific analysis.  In the proposal period, we will also develop a preliminary design for a data analysis
-pipeline (DAP).  Unique among Keck instruments, the FOBOS DAP will take advantage of the fixed spectral format and common target classes to provide high-level data products, including
-Doppler shift, emission-line strengths, and template continuum fits (cf.,
-Westfall et al.; SDSS-IV MaNGA DAP).  The DAP will also produce results from relevant machine-learning applications (e.g., redshifts at low-S/N).
-
-Raw data, reduced spectra, and high-level DAP science products will be
-publicly delivered via user-friendly platforms built on the Keck Observatory Archive.  After associated
-proprietary periods, data will be served for {\it all} FOBOS observations, creating a rich legacy data set for the astronomical community.  Both program PIs
-and the larger community will be encouraged to develop the DRP and DAP
-to meet the needs of specific science applications.  These software
-packages will be open source and publicly served (e.g., using GitHub).
 
 \section{Broader Impacts}
 \label{sec:bi}
@@ -692,6 +608,58 @@ postdocs, and staff.  The {\bf Science Internship Program} (SIP) creates a simil
  over a 10 week summer program.  We will design projects for both programs focused on simulating data sets and
  introducing machine learning concepts used in our Data Science Challenges.  Both PI Bundy and co-PI Westfall have
  served as research mentors in these programs.
+
+
+\subsection{Management}
+
+\begin{figure}[h!]
+%
+\vskip -0.1in
+%
+\includegraphics[width=\textwidth]{figs/Pre-Proposal_Project_figure.jpg}
+%
+\caption{\small Microsoft Project plan WBS and schedule.}
+%
+\label{fig:gantt}
+%
+\end{figure}
+
+We have crafted an aggressive project plan (Figure \ref{fig:gantt}) to enable first-light in 2028 in order to maximize
+synergy with LSST and WFIRST.  This plan envisions a Preliminary Design Review in 2022, which motivates a subsequent
+MSIP request that year for Final Design funding.  A ``bridge phase'' (2022-2023) continues development of critical
+long-lead sub-systems, that if put on hold, would delay first-light.  Other private and future NSF solicitations (MSRI
+in 2023), in addition to funding from our Australian partners (through the LIEF program), provide opportunities to
+complete the FOBOS design and initial construction phases.
+
+
+\begin{figure}[h!]
+%
+\vskip -0.1in
+%
+\includegraphics[width=\textwidth]{figs/Pre-Proposal_Project_figure.jpg}
+%
+\caption{\small Management structure.}
+%
+\label{fig:org}
+%
+\end{figure}
+
+
+Our management structure is presented in Figure \ref{fig:org}.  With Bundy as PI, overall project management is
+provided by Nick MacDonald with assistance from Maureen Savage while Kyle Westfall (Project Scientist) leads science
+definition and the science team.  Two Instrument Scientist positions oversee the front-facing (focal plane and fibers)
+and back-facing (spectrographs and detectors) modules.  Our project management controls framework builds from low-level
+task lists for each WBS element to an integrated resource-loaded project plan that tracks schedule, cash flow, and
+earned value on a quarterly basis.  Project leads at each participating institution maintain individual schedules and
+budgets and report progress to the Project Manager.  We hold 20\% contingency appropriate for Preliminary Design.
+Contingency and budget estimation processes are defined in our PEP.
+
+% FOBOS has a detailed Project Management Plan (PEP) which follows guidelines outlined in Section 3 of the NSF Major Facilities Guide (NSF 19-XX Dec 2018).  The PEP is outlined at Level 1 for this pre-proposal.  Level one PEP outlines is as follows; 1. Introduction, 2.  Organization, 3.  Design and Development, 4.  Contraction project definition, 5.  Staffing, 6.  Risk and Opportunity Management, 6.  Systems Engineering, 7.  Configuration and Controls, 8.  Acquisitions, 9.  Project Management Controls, 10.  Site and Environment, 11.  Cyber-infrastructure, 12.  Environmental Safety and Health Plans, 13.  Reviews and Reporting, 14.  Commissioning, 15.  Project Closeout plan
+
+% Project management controls for this and future project phases is accomplished by low level task lists which are used to develop resource loaded schedules for determining both cost and duration.  This ‘bottom up’ approach allows for a detailed accounting of project cost and cash flow.  It allows for in process tracking trough earned value reporting, earned value will be calculated a minimum quarterly or when deemed necessary by the Project Manager.  Each sub-award institution is responsible for maintaining their own schedule and budget as well as reported earned value to the Project Manager.  A detailed Work Breakdown and Product Breakdown structure is in place to insure clear understand scope of delivered work and to insure well documented interfaces between systems.
+
+% Contingency for this proposal, funding of preliminary design, is set at 20\%.  As the project develops the contingency on future work and equipment will be set using a combination of basis of estimate and associated risk.  The process for contingency estimation is included in the detailed PEP.
+
 
 \newpage
 

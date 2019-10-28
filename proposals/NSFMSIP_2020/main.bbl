@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{6}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Barnes} et~al.(2018){Barnes}, {Ball}, {Starr}, {Seagroves}, {Perez},
@@ -75,21 +75,5 @@
   {Wechsler}, RH; {Wood-Vasey}, WM; {Zentner}, AR. ``{Spectroscopic needs for
   imaging dark energy experiments},'' {\em Astroparticle Physics\/}, v.~63,
   2015, p. 81--100
-
-\bibitem[{Newman} et~al.(2013){Newman}, {Cooper}, {Davis}, {Faber}, {Coil},
-  {Guhathakurta}, {Koo}, {Phillips}, {Conroy}, {Dutton}, {Finkbeiner}, {Gerke},
-  {Rosario}, {Weiner}, {Willmer}, {Yan}, {Harker}, {Kassin}, {Konidaris},
-  {Lai}, {Madgwick}, {Noeske}, {Wirth}, {Connolly}, {Kaiser}, {Kirby},
-  {Lemaux}, {Lin}, {Lotz}, {Luppino}, {Marinoni}, {Matthews}, {Metevier}, and
-  {Schiavon}]{newman13}
-{Newman}, JA; {Cooper}, MC; {Davis}, M; {Faber}, SM; {Coil}, AL;
-  {Guhathakurta}, P; {Koo}, DC; {Phillips}, AC; {Conroy}, C; {Dutton}, AA;
-  {Finkbeiner}, DP; {Gerke}, BF; {Rosario}, DJ; {Weiner}, BJ; {Willmer}, CNA;
-  {Yan}, R; {Harker}, JJ; {Kassin}, SA; {Konidaris}, NP; {Lai}, K; {Madgwick},
-  DS; {Noeske}, KG; {Wirth}, GD; {Connolly}, AJ; {Kaiser}, N; {Kirby}, EN;
-  {Lemaux}, BC; {Lin}, L; {Lotz}, JM; {Luppino}, GA; {Marinoni}, C; {Matthews},
-  DJ; {Metevier}, A; {Schiavon}, RP. ``{The DEEP2 Galaxy Redshift Survey:
-  Design, Observations, Data Reduction, and Redshifts},'' {\em \apjs\/}, v.
-  208, 2013, p.~5
 
 \end{thebibliography}

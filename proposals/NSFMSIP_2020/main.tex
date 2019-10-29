@@ -384,7 +384,7 @@ largest modes of large-scale structure while also limiting sample
 (``cosmic'') variance. This program component requires a total of 26
 nights, spread over 5 years. (2) Jointly with the FOBOS Cosmology
 Program, which will use two-thirds of FOBOS's fiber complement,
-one-third of FOBOS's fibers will be configured into 16 37-fiber IFUs
+one-third of FOBOS's fibers will be configured into 15 37-fiber IFUs
 (5.6 arcsec on-sky diameter) and map emission lines from the CGM.
 Capitalizing on 100-hour integrations, these observations will allow
 unprecedented measurements of the CGM {\it in emission} on 5 kpc
@@ -421,7 +421,6 @@ Andromeda system's formation history will address key questions about
 disk evolution, dwarf galaxies, and substructure that have so far
 been limited to the Milky Way subsystem.
 
-%-----------------------------------------------------------------------
 \begin{wrapfigure}{r}{0.5\textwidth}\small
 \includegraphics[width=0.5\textwidth]{figs/M31_footprint_v1.pdf}
 \caption{FOBOS Andromeda Program survey footprint (white circles)
@@ -432,6 +431,7 @@ $+$H$\alpha$ (credit: Adam Evans).}
 \label{fig:M31}
 \end{wrapfigure}
 
+%-----------------------------------------------------------------------
 \chal{stellar} 
 %
 \begin{enumerate}[rightmargin=0.2cm,leftmargin=0.2cm]
@@ -461,16 +461,45 @@ II. This program requires 24 nights per year for 5 years.
 
 \section{Scientific Benefits to the U.S.\ Community}
 
-We propose community engagement activities to coordinate involvement of U.S.~astronomers (especially those outside the Keck Community) in developing and leading FOBOS public survey programs whose data products will benefit wide swaths of the astronomical community.  In partnership with NSF's OIR Lab (formerly NOAO), we will develop additional ``open-access'' models to offer $\sim$100,000 fiber-hours per year in support of individual, PI-led programs to be integrated into the FOBOS observing suite.  NSF's OIR Lab will build planning and simulation tools for proposers and facilitate open access time allocation.
+We propose community engagement activities to coordinate involvement
+of U.S.~astronomers (especially those outside the Keck Community) in
+developing and leading FOBOS public survey programs whose data
+products will benefit wide swaths of the astronomical community. In
+partnership with NSF's OIR Lab (formerly NOAO), we will develop
+additional ``open-access'' models to offer $\sim$100,000 fiber-hours
+per year in support of individual, PI-led programs to be integrated
+into the FOBOS observing suite. NSF's OIR Lab will build planning and
+simulation tools for proposers and facilitate open access time
+allocation.
 
-To further define FOBOS key science over the proposal period, NSF's OIR Lab will also solicit additional key program
-concepts from the U.S. community, host workshops to discuss and refine these concepts, and coordinate proposing teams
-ahead of a competed selection process to define design-reference programs in support of Preliminary and Final Design.
-We will also use our established connections\footnote{Co-I Schafer is Co-Chair of LSST's ISSC.} to LSST's Informatics
-and Statistics Science Collaboration (ISSC) to advertise, recruit, and coordinate efforts on deep-learning tools for
+To further define FOBOS key science over the proposal period, NSF's
+OIR Lab will also solicit additional key program concepts from the
+U.S. community, host workshops to discuss and refine these concepts,
+and coordinate proposing teams ahead of a competed selection process
+to define design-reference programs in support of Preliminary and
+Final Design. We will also use our established
+connections\footnote{Co-I Schafer is Co-Chair of LSST's ISSC.} to
+LSST's Informatics and Statistics Science Collaboration (ISSC) to
+advertise, recruit, and coordinate efforts on deep-learning tools for
 both key science and FOBOS operations (e.g., MAISTRO).
 
-Finally, we have emphasized the design of software platforms necessary for a seamless user experience from target submission to data product retrieval and analysis.  FOBOS will be the first \emph{general-purpose} spectroscopic instrument to automatically provide high-level data products such as redshifts, stellar continuum fits, and emission line measurements.  With a commitment to the public release of such products derived from \emph{all} FOBOS observations, these data products will dramatically reduce the time from observations to science.  The team has delivered previously in this regard, providing the first comprehensive high-level data product package for an SDSS survey with MaNGA's\footnote{MaNGA: Mapping Nearby Galaxies at Apache Point Observatory, one of three core programs in SDSS-IV completing in 2020.  Bundy also serves as the MaNGA PI.  Westfall, the FOBOS Project Scientist, led development of MaNGA's Data Analysis Pipeline.} Data Analysis Pipeline \citep{westfall19} and its interactive public science platform, Marvin \citep{cherinka19}.  
+Finally, we have emphasized the design of software platforms
+necessary for a seamless user experience from target submission to
+data product retrieval and analysis. FOBOS will be the first
+\emph{general-purpose} spectroscopic instrument to automatically
+provide high-level data products such as redshifts, stellar continuum
+fits, and emission line measurements. With a commitment to the public
+release of such products derived from \emph{all} FOBOS observations,
+these data products will dramatically reduce the time from
+observations to science. The team has delivered previously in this
+regard, providing the first comprehensive high-level data product
+package for an SDSS survey with MaNGA's\footnote{MaNGA: Mapping
+Nearby Galaxies at Apache Point Observatory, one of three core
+programs in SDSS-IV completing in 2020. Bundy also serves as the
+MaNGA PI. Westfall, the FOBOS Project Scientist, led development of
+MaNGA's Data Analysis Pipeline.} Data Analysis Pipeline
+\citep{westfall19} and its interactive public science platform,
+Marvin \citep{cherinka19}.
 
 
 
@@ -553,40 +582,45 @@ Finally, we have emphasized the design of software platforms necessary for a sea
 %    \parbox[b]{0.3\textwidth}{\small {\bf Figure ??:} Rendering of FOBOS instrument systems deployed at the Keck II Nasmyth port.  By mounting the FOBOS spectrographs under the Nasmyth platform, other instruments like DEIMOS can maintain access to the telescope. \vspace{2cm}}}}
 
 \begin{figure}[h!]
-%
 \vskip -0.1in
-%
 \includegraphics[width=\textwidth]{figs/FOBOS_inst_2019-10-28.pdf}
-%
 \caption{\small {\it Left}: Rendering of FOBOS instrument systems
-deployed at the Keck II Nasmyth port.  {\it Right}: Optical layout of one of
-the three four-armed FOBOS spectrographs.}
-%
+deployed at the Keck II Nasmyth port. {\it Right}: Optical layout of
+one of the three four-armed FOBOS spectrographs.}
 \label{fig:layout}
-%
 \end{figure}
 
-We summarize major FOBOS sub-systems below based on the current conceptual design.  We propose to advance all components to a state of Preliminary Design readiness.  Our risk register assigns the highest risk levels to 1) Starbugs positioners (adhesion and control), 2) Micro fore-optics at the fiber input (alignment and process control), 3) Calibration system performance (uniformity and stability).
+We summarize major FOBOS sub-systems below based on the current
+conceptual design. We propose to advance all components to a state of
+Preliminary Design readiness. Our risk register assigns the highest
+risk levels to 1) Starbugs positioners (adhesion and control), 2)
+Micro fore-optics at the fiber input (alignment and process control),
+3) Calibration system performance (uniformity and stability).
 
 \begin{wrapfigure}{r}{0.3\textwidth}\small
-%
 \includegraphics[width=0.3\textwidth]{figs/starbugs_v1.jpg}
-%
 \caption{Starbugs fiber positioners.}
-%
 \label{fig:org}
-%
 \end{wrapfigure}
 
-\noindent \textbf{Focal Plane System.} Mounted at the Nasmyth focus of Keck II Telescope at WMKO (Fig \ref{fig:layout}), FOBOS is a modular instrument
-composed of several major system.  Telescope light passes through the first two 946 mm diameter lenses of a 3-lens
-compensating lateral atmospheric dispersion corrector (CLADC) before encountering a 45$^\circ$ mirror that folds the
-beam vertically upwards.  The horizontal 3rd lens of the CLADC is positioned at focus above the fold mirror and serves
-as the mounting plate for a complement of Starbugs that roam its upper surface, positioning downward-pointing fibers on
-desired targets.  The risk of Starbugs adhesion loss and drops is significantly reduced by the fixed horizontal focal
-surface, which preserves a normal gravity vector for the Starbugs and, because they are mounted on top, reduces each
-bugs' vacuum adhesion requirements.  The focal surface rotates as the telescope tracks.  Starbugs can patrol zones up to several arcminutes and can be placed as close as 10\arcsec{}.  Back illumination combined with a fast, imaging metrology camera enables reconfiguration times down to 2 minutes. 
-
+\noindent \textbf{Focal Plane System.} Mounted at the Nasmyth focus
+of Keck II Telescope at WMKO (Fig \ref{fig:layout}), FOBOS is a
+modular instrument composed of several major systems. Telescope light
+passes through the first two 946 mm diameter lenses of a 3-lens
+compensating lateral atmospheric dispersion corrector (CLADC) before
+encountering a 45$^\circ$ mirror that folds the beam vertically
+upwards. The horizontal 3rd lens of the CLADC is positioned at focus
+above the fold mirror and serves as the mounting plate for a
+complement of Starbugs that roam its upper surface, positioning
+downward-pointing fibers on desired targets. The risk of Starbugs
+adhesion loss and drops is significantly reduced by the fixed
+horizontal focal surface, which preserves a normal gravity vector for
+the Starbugs and, because they are mounted on top, reduces each bugs'
+vacuum adhesion requirements. The focal surface rotates as the
+telescope tracks. Starbugs can patrol zones up to several arcminutes
+and can be placed as close as 10\arcsec{}. Back illumination combined
+with a fast, imaging metrology camera enables reconfiguration times
+down to 2 minutes.
 
 %  \begin{enumerate}[rightmargin=0.2cm,leftmargin=0.2cm]
 
@@ -595,38 +629,66 @@ bugs' vacuum adhesion requirements.  The focal surface rotates as the telescope 
 
 % \end{enumerate}
 
-\noindent \textbf{Spectrographs.} Three spectrographs adjacent to the focal plane module are fed by a short ($< 10$m)
-stress-relieving fiber run in order to preserve UV throughput.  Each spectrograph uses dichroics to divide the 140 mm
-diameter collimated beam into four wavelength channels with combined, instantaneous coverage from 0.31--1 $\mu$m.
-Fused-silica etched (FSE) gratings provide mid-channel spectral resolutions of $R \sim 3500$ at high diffraction
-efficiency in each channel.  The dispersed light is focused by f/2.25 refractive cameras\footnote{Based on the camera
-design for the DESI spectrographs.} and recorded by 6k$\times$6k CCDs with 15 $\mu$m pixels and 5-pixel sampling of the
-fiber diameter. The spectrographs are mounted in a temperature-controlled housing on the Nasmyth Deck.  The estimated
-end-to-end instrument throughput peaks at 60\% and is greater than 30\% at all wavelengths.
+\noindent \textbf{Spectrographs.} Three spectrographs adjacent to the
+focal plane module are fed by a short ($< 10$m) stress-relieving
+fiber run in order to preserve UV throughput. Each spectrograph uses
+dichroics to divide the 140 mm diameter collimated beam into four
+wavelength channels with combined, instantaneous coverage from
+0.31--1 $\mu$m. Fused-silica etched (FSE) gratings provide
+mid-channel spectral resolutions of $R \sim 3500$ at high diffraction
+efficiency in each channel. The dispersed light is focused by f/2.25
+refractive cameras\footnote{Based on the camera design for the DESI
+spectrographs.} and recorded by 6k$\times$6k CCDs with 15 $\mu$m
+pixels and 5-pixel sampling of the fiber diameter. The spectrographs
+are mounted in a temperature-controlled housing on the Nasmyth Deck.
+The estimated end-to-end instrument throughput peaks at 60\% and is
+greater than 30\% at all wavelengths.
 
+\noindent \textbf{Focal Plane Sampling.} FOBOS deploys a total of
+1800 fibers. Fore-optics on the front end of each fiber demagnify and
+speed up the beam (from f/15 to f/5 \comment{f/5 or f/3ish ?}) for
+better coupling to the fiber numerical aperture and to minimize
+losses from focal-ratio degradation (microlens arrays accomplish this
+for the fiber bundles). The nominal sky sampling of each fiber is
+0.8\arcsec{} (diameter). A day-time procedure switches between
+different targeting modes for each spectrograph: 1) individual
+fibers, 600 per spectrograph; 2) A set of 15 multiplexed fiber-bundle
+IFUs (per spectrograph), each composed of 37 fibers and spanning up
+to 5.6\arcsec{}; 3) A 30\arcsec{}-wide monolithic IFU (1641 fibers).
+In all cases, $\sim$10\% of individual fibers are reserved for sky
+sampling and 5--10 7-fiber mini-bundles collect standard stars for
+instantaneous flux calibration. The design will accept and take
+advantage of ground-layer adaptive optics (GLAO) corrections should a
+GLAO system be deployed at Keck II.
 
-\noindent \textbf{Focal Plane Sampling.} FOBOS deploys a total of 1800 fibers.  Fore-optics on the front end of each fiber demagnify and speed up the beam (from f/15 to f/5) for better
-coupling to the fiber numerical aperture and to minimize losses from focal ratio degradation (microlens arrays accomplish this for the fiber bundles).  The nominal sky sampling
-of each fiber is 0.8\arcsec{} (diameter).  A day-time procedure switches between different targeting modes for each
-spectrograph: 1) individual fibers, 600 per spectrograph; 2) A set of 15 multiplexed fiber-bundle IFUs (per
-spectrograph), each composed of 37 fibers and spanning up to 5.6\arcsec{}; 3) A 30\arcsec{}-wide monolithic IFU (1641
-fibers).  In all cases, $\sim$10\% of individual fibers are reserved for sky sampling and 5--10 7-fiber mini-bundles
-collect standard stars for instantaneous flux calibration.  The design will accept and take advantage of ground-layer adaptive optics (GLAO) corrections should a GLAO system be deployed at Keck II.
+\noindent \textbf{Calibration System.} Stability and the limitation
+of potential instrument systematics demand a precise calibration
+system. Afternoon flat-field and arc-line exposures will use a
+carefully-illuminated interior dome screen. Nighttime calibrations
+involve rotating the fold mirror towards a pupil-injection system
+adjacent to the focal-plane module. Absolute flat-field measurements
+in the afternoon and relative fiber-to-fiber measurements from
+nighttime calibrations will be combined to model the instrument$+$sky
+response during observations.
 
-
-\noindent \textbf{Calibration System.} Stability and the limitation of potential instrument systematics demand a
-precise calibration system.  Afternoon flat-field and arc-line exposures will use a carefully-illuminated interior dome
-screen.  Nighttime calibrations involve rotating the fold mirror towards a pupil injection system adjacent to the focal
-plane module.  Absolute flat-field measurements in the afternoon and relative fiber-to-fiber measurements from
-nighttime calibrations will be combined to model the instrument$+$sky response during observations.
-
-\noindent \textbf{Data Management System.} All software related to observational planning, data collection, processing, and serving.  An API communicates between major sub-systems.  \emph{The Doctor}: A database of metadata and performance metrics as well as analysis software to monitor instrument health and predict performance.  \emph{The Producer}: Planning, simulation, and execution of integrated, multiple-pointing observing programs based on MAISTRO\footnote{MAISTRO: Modular
-Artificial Intelligence System for Target Reallocation and Observing.}, an ``artificial intelligence'' (AI) targeting
-system that will learn optimization strategies for assigning targets defined by the Lead Observer as well as a database
-containing overlapping and prioritized programs.  \emph{The Accountant}: A data-reduction pipeline with runtime options
-for both quick-look and science-ready reductions. \emph{The Alchemist}: Automated derivation of high-level data products (e.g.,
-redshifts). \emph{The Curator}: An archive of all data and data products as well as a dynamic interface and
-science platform for visualization and analysis.
+\noindent \textbf{Data Management System.} All software related to
+observational planning, data collection, processing, and serving. An
+API communicates between the following major sub-systems. {\bf The
+Doctor}: A database of metadata and performance metrics, as well as
+analysis software, to monitor instrument health and predict
+performance. {\bf The Producer}: Planning, simulation, and execution
+of integrated, multiple-pointing observing programs based on {\it
+MAISTRO}\footnote{MAISTRO: Modular Artificial Intelligence System for
+Target Reallocation and Observing.}, an ``artificial intelligence''
+(AI) targeting system that will learn optimization strategies for
+assigning targets defined by the Lead Observer, as well as a database
+containing overlapping and prioritized programs. {\bf The
+Accountant}: A data-reduction pipeline with runtime options for both
+quick-look and science-ready reductions. {\bf The Alchemist}:
+Automated derivation of high-level data products (e.g., redshifts).
+{\bf The Curator}: An archive of all data and data products as well
+as a dynamic interface and science platform for visualization and
+analysis.
 
 % \noindent \textbf{MAISTRO: Target Allocation with Artificial Intelligence} Powered by Starbugs fiber positioners, FOBOS will enable fast, dynamic
 % reallocation of fibers.  To efficiently determine the best options given
@@ -662,56 +724,59 @@ science platform for visualization and analysis.
 % enough design effort, this lends itself to a machine-learning
 % application.
 
-
-
-
-
-
-
 \section{Broader Impacts and Student Training}
 \label{sec:bi}
 
 \subsection{Akamai: Training the next generation of Hawaiian STEM
-professionals} Led by the Institute for Scientist and Engineer Educators
-(ISEE) at UCSC, the Akamai Internship Program is aimed at advancing
-college students from Hawai'i into the STEM workforce.  Almost 400
-students have participated to date, of which 24\% are Native Hawaiian
-and 38\% are women. A longitudinal study of Akamai outcomes indicated
-that 87\% were still in STEM, either in the workforce or continuing STEM
-studies \citep{asee_peer_31030}.  ISEE and the Akamai program already have deep connections to WMKO; 45 interns have
-worked on projects related to instrument
-development and observatory operations over the past 15 years.  Our
-funding request includes support for two Akamai interns.\footnote{
+professionals} Led by the Institute for Scientist and Engineer
+Educators (ISEE) at UCSC, the Akamai Internship Program is aimed at
+advancing college students from Hawai'i into the STEM workforce.
+Almost 400 students have participated to date, of which 24\% are
+Native Hawaiian and 38\% are women. A longitudinal study of Akamai
+outcomes indicated that 87\% were still in STEM, either in the
+workforce or continuing STEM studies \citep{asee_peer_31030}. ISEE
+and the Akamai program already have deep connections to WMKO; 45
+interns have worked on projects related to instrument development and
+observatory operations over the past 15 years. Our funding request
+includes support for a total of eight Akamai interns (four per
+year).\footnote{
 %
-At UCO, an Akamai intern during Summer 2018 helped build a fiber
-test-bench at UCSC.}
-%
-One intern will develop aspects of the FOBOS instrument simulator and use this simulator to develop performance metrics
-for the Preliminary Design.  The second will build machine-learning tools for Data-Science Challenge \ref{lowsnr},
-specifically for obtaining spectroscopic redshifts at low S/N.
+Kupke, MacDonald, and Westfall have all mentored Akamai interns at
+UCO, including one who helped build a fiber test-bench at UCSC during
+Summer 2018.} We aim to support students hosted at UCO, Berkeley/SSL,
+and WMKO in development of our fiber-testing facilities, the
+opto-mechanical design of the ADC and spectrographs, and the design
+of our data-management systems.
 
+% One intern will develop aspects of the FOBOS instrument simulator and
+% use this simulator to develop performance metrics for the Preliminary
+% Design. The second will build machine-learning tools for Data-Science
+% Challenge \ref{lowsnr}, specifically for obtaining spectroscopic
+% redshifts at low S/N.
 
 \subsection{Investing in future educators} Also via the ISEE, we will
-support three graduate students to participate in the Professional
-Development Program (PDP) that build teaching skills through
-collaborative design of an inquiry activity.  The PDP team conceives,
-develops, and tests the activity which culminates in a lab exercise
-run with undergraduates. The program
-emphasizes inclusive and equitable learning environments.  Specifically, our team of graduate
-students will develop a lab unit related to FOBOS instrument development aimed at
-incoming community college transfer students enrolled in UCSC's
-highly-successful Lamat Program.  In addition to enriching graduate
-student training, these efforts will positively impact 25
-undergraduates from California community colleges, a large fraction
-from underrepresented minority groups.
+support four graduate students (two per year) to participate in the
+Professional Development Program (PDP) that build teaching skills
+through collaborative design of an inquiry activity. The PDP team
+conceives, develops, and tests the activity which culminates in a lab
+exercise run with undergraduates. The program emphasizes inclusive
+and equitable learning environments. Specifically, our team of
+graduate students will develop a lab unit related to FOBOS instrument
+development aimed at incoming community college transfer students
+enrolled in UCSC's highly-successful Lamat Program. In addition to
+enriching graduate student training, these efforts will positively
+impact 25 undergraduates from California community colleges, a large
+fraction from underrepresented minority groups.
 
-\subsection{Student Training} UCSC's {\bf Astro 9} course introduces scientific research methods to 1st-year students
-by engaging small student teams on actual research projects supervised by graduate students,
-postdocs, and staff.  The {\bf Science Internship Program} (SIP) creates a similar environment for high-school students
- over a 10 week summer program.  We will design projects for both programs focused on simulating data sets and
- introducing machine learning concepts used in our Data Science Challenges.  Both PI Bundy and co-PI Westfall have
- served as research mentors in these programs.
-
+\subsection{Student Training} UCSC's {\bf Astro 9} course introduces
+scientific research methods to 1st-year students by engaging small
+student teams on actual research projects supervised by graduate
+students, postdocs, and staff. The {\bf Science Internship Program}
+(SIP) creates a similar environment for high-school students over a
+10 week summer program. We will design projects for both programs
+focused on simulating data sets and introducing machine learning
+concepts used in our Data Science Challenges. Both PI Bundy and co-PI
+Westfall have served as research mentors in these programs.
 
 \section{Project Management}
 

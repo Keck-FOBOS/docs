@@ -149,10 +149,10 @@ and WFIRST\footnote{
 %
 WFIRST: The Wide Field Infrared Survey Telescope, expected to launch in the mid 2020's.},
 %
-astronomy is entering a new era of unprecedented deep-imaging campaigns that will survey huge volumes of the
-Universe.  From the emergence of the earliest galaxies from a ``primordial soup'' of gas and dust, to the peak of
-cosmic star formation and the current era of accelerated expansion, these surveys will provide unprecedented statistics
-at key epochs of cosmic history.
+astronomy is entering a new era of unprecedented deep-imaging campaigns that will survey huge volumes of the Universe.
+From the emergence of the earliest galaxies from a ``primordial soup'' of gas and dust, through the epoch of cosmic
+expansion, to the evolved structure of present day galaxies in our own Local Group, these surveys will provide
+unprecedented insights into key epochs of cosmic history.
 
 % Meanwhile, the rate of cosmic expansion was beginning to accelerate,
 % as the Universe became increasingly dominated by ``Dark Energy,''
@@ -161,136 +161,47 @@ at key epochs of cosmic history.
 
 % Since Edwin Hubble's observations over 100 years ago,
 
-Even so, gaining physical insight from panoramic imaging surveys will require intensive spectroscopic follow-up.  The
-power of combining photometry and dedicated spectroscopy is widely appreciated and perhaps best illustrated by the
-success of the Sloan Digital Sky Survey (SDSS) which used this combination to record the properties of over 1 million
-galaxies, mapping the present-day universe and making SDSS one of the most highly cited surveys in the history of
-astronomy.
+Even so, as the success of the Sloan Digital Sky Survey (SDSS) made clear, the scientific value of panoramic imaging
+increases dramatically when coupled with intensive spectroscopic followup.  But for LSST and WFIRST, this presents a
+challenge.  At the end of the next decade, these facilities will deliver imaging data across vast areas, 1,000 times
+deeper than SDSS. \textbf{No current U.S.~facility is capable of obtaining spectroscopic follow-up at these depths} at
+the level required to capitalize on the $\approx$\$4B the U.S.\ is investing in these projects.  In fact, an SDSS-like
+spectroscopic study of 1 million galaxies at LSST depth would require 300 years of observing on the largest telescopes
+with current instrumentation!
 
-% Because a quality spectrum requires far more observing time per source
-% than an image, SDSS pioneered ``high multiplex'' spectrographs,
-% capable of \emph{simultaneous} spectroscopy of hundreds of objects.
-
-LSST's all-sky images, for example, will be 1,000 times deeper and detect far more
-distant galaxies than SDSS, but \textbf{no current U.S.~facility is
-capable of obtaining spectroscopic follow-up of LSST galaxies} at a level
-required to capitalize on the \$1B the U.S.\ has invested in that
-project.  In fact, an SDSS-like spectroscopic study of 1 million
-galaxies at LSST depth would require 300 years of observing on the
-largest telescopes with current instrumentation!  
-
-This proposal addresses this challenge through the design of an ambitious spectroscopy facility on one of the world's largest telescopes.  Timed to deploy on WMKO's\footnote{WMKO: W.~M.\ Keck Observatory operates the two twin 10m Keck Telescopes.} Keck II Telescope in 2028, just as various panoramic deep imaging surveys hit their stride, FOBOS's\footnote{FOBOS: Fiber-Optic Broadband Optical Spectrograph} 1800-fiber multiplex, deep sensitivity, high sampling density, and wide wavelength coverage is optimized for the \emph{deep-drilling} spectroscopic training sets required to extract maximum information from wide-field photometry.  Its flexible target allocation system and multiplexed IFU mode provide unique capabilities for realizing major progress on fundamental goals in Cosmology, Galaxy Formation, and Local Group Archaeology, and Time Domain Astronomy in the coming decade.
-
-\subsection{Community Benefits}
-
-Based on science requirements derived from reference-mission key programs, we present a comprehensive plan for optimizing and completing the design of the FOBOS instrumentation, calibration and support systems, operational and planning software, and data management systems.  We propose community engagement activities to coordinate involvement of U.S.~astronomers including those outside the Keck Community in developing and leading FOBOS public survey programs whose data products will benefit wide swaths of the astronomical community.  In partnership with NOAO (this name might change), we will develop additional ``open-access'' models to offer $\sim$100,000 fiber-hours per year in support of individual, PI-led programs to be integrated into the FOBOS observing suite.  Finally, we have emphasized the design of software platforms necessary for a seamless user experience from target submission to data product retrieval and analysis.  FOBOS will be the first general-purpose spectroscopic instrument to automatically provide high-level data products such as redshifts, stellar continuum fits, and emission line measurements.  With a commitment to the public release of such products derived from \emph{all} FOBOS observations, these data products will dramatically reduce the time from observations to science.
-
-As part of the work we propose here, NSF's OIR Lab will solicit additional key program concepts from the U.S. community, host workshops to discuss and refine these concepts, and coordinate proposing teams ahead of a competed selection process to define design-reference programs in support of Preliminary and Final Design.
-
-
-
-Our team includes leading experts on data science applications to
-astronomy and, specifically, LSST.  We will also use our established
-connections to LSST's Informatics and Statistics Science Collaboration
-(ISSC) to advertise, recruit, and coordinate efforts to tackle the Data
-Science Challenges described in Section \ref{sec:goals}.  Our proposal
-request includes two community workshops to motivate progress and discuss
-results. At the end of the proposal period, we will publish the results
-and developed software packages.
-
-Our data-science challenges require work on simulated
-imaging$+$spectroscopic data sets where input physical properties (e.g.,
-redshift) can be compared to output recovered values.  Simulated imaging
-data (e.g., from LSST and WFIRST) are in-hand, while mock spectroscopy
-will be provided by a FOBOS instrument simulator, an initial version of
-which has already been developed.  Further advances to be supported by
-this proposal include improved error modeling and simulating systematic
-effects from detector artifacts, image quality aberrations informed by
-the emerging detailed optical design, and variable observing conditions.
-
-While the FOBOS data simulator is required for our data-science challenges, it also forms the basis of a delivered data
-reduction pipeline (DRP) for this instrument.  This software will provide both the quick reduction assessments needed
-for dynamic targeting, as well as full reductions for scientific analysis.  In the proposal period, we will also develop a preliminary design for a data analysis
-pipeline (DAP).  Unique among Keck instruments, the FOBOS DAP will take advantage of the fixed spectral format and common target classes to provide high-level data products, including
-Doppler shift, emission-line strengths, and template continuum fits (cf.,
-Westfall et al.; SDSS-IV MaNGA DAP).  The DAP will also produce results from relevant machine-learning applications (e.g., redshifts at low-S/N).
-
-Raw data, reduced spectra, and high-level DAP science products will be
-publicly delivered via user-friendly platforms built on the Keck Observatory Archive.  After associated
-proprietary periods, data will be served for {\it all} FOBOS observations, creating a rich legacy data set for the astronomical community.  Both program PIs
-and the larger community will be encouraged to develop the DRP and DAP
-to meet the needs of specific science applications.  These software
-packages will be open source and publicly served (e.g., using GitHub).
-
-% \subsection{Research Community Priority} 
-% \label{sec:community}
-
-% The need for spectroscopic follow-up in the LSST era was made clear in
-% the National Research Council's 2015 report, ``Optimizing the U.S.
-% Ground-Based Optical and Infrared Astronomy System'' \citep{NAP21722}:
-% %
-% \noindent\begin{center}\mbox{\parbox{0.95\linewidth}{
-% %
-% The National Science Foundation should support the development of a
-% wide-field, highly multiplexed spectroscopic capability on a medium- or
-% large-aperture telescope in the Southern Hemisphere to enable a wide
-% variety of science, including follow-up spectroscopy of Large Synoptic
-% Survey Telescope targets. Examples of enabled science are studies of
-% cosmology, galaxy evolution, quasars, and the Milky Way.
-% %
-% }}\end{center}
-
-% Workshops organized by the National Optical Astronomy Observatory (NOAO)
-% in 2013 and 2016, the latter at the NSF's request, reported specific
-% spectroscopic needs for LSST follow-up in all science areas.  In
-% particular, the 2016 report notes that a critical resource in need of
-% prompt development is to ``Develop or obtain access to a highly
-% multiplexed, wide-field optical multi-object spectroscopic capability on
-% an 8m-class telescope.''  Based on these recommendations, we propose the
-% FOBOS instrument coupled with a suite of data-driven tools to address
-% the spectroscopic requirements of LSST and other photometric surveys at
-% a final cost 20 times less than a new Southern Hemisphere facility.
-% Located in Hawaii, FOBOS can access more than 70\% of the LSST
-% footprint, more than adequate for building powerful
-% spectroscopic training sets.  Compared to the Prime Focus Spectrograph
-% (PFS) on Japan's Subaru Telescope, FOBOS would be 1.7$\times$ faster,
-% provide unique UV sensitivity (0.31--1 $\mu$m compared to
-% 0.38--1.25 $\mu$m with PFS), and offer higher-density, more flexible
-% target sampling over ``deep-drilling'' fields.  Unlike PFS, FOBOS would be operated
-% on a U.S.\ telescope with dedicated U.S.\ access and a commitment to
-% supporting U.S.-led imaging facilities.  FOBOS is also complementary to
-% future telescopes and instruments that would be optimized to cover wider areas
-% (several deg$^2$ per pointing) at shallower depths.
-
-%\comment{mention FOBOS can do PI-led science too}
-
-% The need for deep spectroscopic follow-up is particularly acute for the major cosmological probes to be carried out by
-% LSST, Euclid, and WFIRST, which all rely on ``photometric redshifts:'' measures of galaxy redshift, $z$
-% --- a direct proxy of distance and look-back time---based on imaging alone. \citet{newman15} summarize the case for a
-%     significant spectroscopic campaign to calibrate and train LSST photometric redshifts in order to improve cosmological constraints.  They describe a redshift survey that,
-%     if carried out with FOBOS, would increase LSST's Dark Energy figure-of-merit by 40\% at a cost of less than 5\% of
-%     the LSST budget.  The urgent case for spectroscopic redshift training has been the subject of numerous publications
-%     \citep[e.g.,][]{laureijs11, masters15, hemmati18}.
-
-% Meanwhile, the astronomy community recognizes that the coming ``Big
-% Data'' era, culminating in LSST, necessitates ``\textbf{harnessing the
-% data revolution}.''  Widespread community interest in advanced
-% data-science techniques continues to grow amidst calls for educational
-% programs, conference series, and research funding to support the growth
-% of a new field, ``Astroinformatics,'' which exploits the interface
-% between astrophysics and statistics \citep{borne09}.  Astronomy's
-% largest organizations, including the American Astronomical Society and
-% the International Astronomical Union, have supported active working
-% groups on astroinformatics and astrostatistics since 2015.  LSST itself
-% has supported the Informatics and Statistics Science Collaboration and
-% partnered with NSF on the Data Science Fellowship Program to train
-% astronomy graduate students in data-science techniques.  Our proposal
-% builds on and contributes to these ongoing efforts.
+This proposal addresses this challenge through the design of an ambitious spectroscopy facility on one of the world's
+largest and most productive telescopes.  Timed to deploy on WMKO's\footnote{WMKO: W.~M.\ Keck Observatory operates the
+two twin 10m Keck Telescopes.} Keck II Telescope in 2028, just as various panoramic deep imaging begin reaching target
+depths, FOBOS's\footnote{FOBOS: Fiber-Optic Broadband Optical Spectrograph} 1800-fiber multiplex, deep sensitivity,
+high sampling density, and wide wavelength coverage is optimized for the \emph{deep-drilling} spectroscopic training
+sets required to extract maximum information from wide-field photometry.  Its flexible target allocation system and
+multiplexed IFU mode provide unique capabilities for realizing major progress on fundamental goals in Cosmology, Galaxy
+Formation, and Local Group Archeology.  FOBOS provides direct benefits to the U.S.\ community (beyond traditional Keck users) through community-led, public key science programs.  Additional  ``open-access'' to $\sim$100,000 fiber-hours per year supports PI-led programs from U.S.\ astronomers.  Finally, based on data from \emph{all} FOBOS observations, raw, reduced, and high-level data products (e.g., redshifts, line fluxes, continuum fits) will be publicly released and served on a science-ready platform.
 
 \subsection{Key Science Goals}
 \label{sec:goals}
 
-We present three ``design-reference'' programs that capture FOBOS's primary science goals and drive initial requirements.  These programs highlight FOBOS's capabilities in addressing the nature of Dark Energy, the formation of galaxies, and the assembly history of the Andromedra Galaxy system.  
+FOBOS's flexible focal plane and IFU capabilities enable a breadth of science, including PI-led, survey-defined, and
+queue-scheduled programs that can be simultaneously combined and integrated to maximize the science return.
+Apportioning FOBOS access in units of fiber-hours instead of only ``nights'' grows the scientific pie by allowing small
+programs with rare targets in the ``long tail'' to observe along one or more medium or large programs.  Such a model
+becomes possible in the deep-wide imaging era where source densities of potential targets (40 arcmin$^2$ at $i_{\rm AB}
+= 25$) far exceed FOBOS's fiber density (6 arcmin$^2$).
+
+The range of possible science investigations beyond the key programs we introduce below is impressive: Milky Way and
+M31 halo stars and substructure; the Milky Way bulge; globular clusters; variable stars from cadenced LSST imaging;
+dwarf galaxies; rapid time-domain followup with an always-ready IFU; structure of Coma and Virgo galaxies with IFUs and
+using globular clusters and PNe as tracers; large IFU samples at $z \sim 1$ of 2D emission-line kinematics; galactic
+winds; radial dependence of stacked stellar populations at $z \sim 1$; environmental group identification at $z \sim
+1$--2; galaxy cluster and proto-cluster followup; QSO light echos in the IGM; redshift calibration of LBG samples at $z
+= 1.5$--5 for CMB lensing cross-correlation.
+
+Turning to ambitious, large-scale FOBOS efforts, we present three ``design-reference'' programs that represent our
+primary science goals and drive science requirements.  An underlying theme in these programs is delivering the
+spectroscopic training sets required to enable an array of deep-learning approaches that can leverage panoramic
+photometry over much larger areas than can be surveyed spectroscopically at depth.  These programs highlight FOBOS's
+capabilities in addressing the nature of Dark Energy, the formation of galaxies, and the assembly history of the
+Andromeda Galaxy system.
 
 
 % \comment{modify the motivation here to reflect our funding request;
@@ -438,10 +349,88 @@ and substructure that have so far been limited to Milky Way and its surroundings
 %
 \item[] {\textsf {\large FOBOS Andromeda Program:}} This program will survey 100,000 primarily RGB stars in the M31 disk, 10,000 stars in M33, and a further 15,000 stars in the central regions of Andromeda's major satellites: NGC 185, NGC 147, and And II.  Accounting for a 60\% rejection rate \citep[see][]{dorman12} due to crowding of ground-based RGB catalogs ($i_{Vega} < 22.5$), on-sky densities of 6 pointings in the PHAT\footnote{Describe and reference PHAT.} region between 5--20 kpc average 1 isolated source every 10\arcsec{}, suitable for 10 independent fiber assignments per pointing.  Two disk pointings beyond 20 kpc will be visited once.  With order-of-magnitude longer integrations than SPLASH\footnote{Describe and reference SPLASH.}, total integrations of 10 hours per visit provide ${\rm S/N} \approx 20$ per resolution element for the faintest targets, a spectral quality sufficient for [Fe/H] with 0.1 dex precision and kinematic fits.  For the ``sweet-spot'' of RGB tracers at $i_{Vega} = 21.5$, ${\rm S/N} \approx 50$, enabling [Mg/Fe] with 0.1 dex precision.  Outside of M31, 6 10-hour visits will cover M33 and 3 visits each are assigned to NGC 185, NGC 147, and And II.  This program requires 23 nights per year for 5 years.  
 
-
-
-
 \end{enumerate}
+
+
+\section{Scientific Benefits to the U.S.\ Community}
+
+We propose community engagement activities to coordinate involvement of U.S.~astronomers (especially those outside the Keck Community) in developing and leading FOBOS public survey programs whose data products will benefit wide swaths of the astronomical community.  In partnership with NSF's OIR Lab (formerly NOAO), we will develop additional ``open-access'' models to offer $\sim$100,000 fiber-hours per year in support of individual, PI-led programs to be integrated into the FOBOS observing suite.  NSF's OIR Lab will build planning and simulation tools for proposers and facilitate open access time allocation.
+
+To further define FOBOS key science over the proposal period, NSF's OIR Lab will also solicit additional key program
+concepts from the U.S. community, host workshops to discuss and refine these concepts, and coordinate proposing teams
+ahead of a competed selection process to define design-reference programs in support of Preliminary and Final Design.
+We will also use our established connections\footnote{Co-I Schafer is Co-Chair of LSST's ISSC.} to LSST's Informatics
+and Statistics Science Collaboration (ISSC) to advertise, recruit, and coordinate efforts on deep-learning tools for
+both key science and FOBOS operations (e.g., MAISTRO).
+
+Finally, we have emphasized the design of software platforms necessary for a seamless user experience from target submission to data product retrieval and analysis.  FOBOS will be the first \emph{general-purpose} spectroscopic instrument to automatically provide high-level data products such as redshifts, stellar continuum fits, and emission line measurements.  With a commitment to the public release of such products derived from \emph{all} FOBOS observations, these data products will dramatically reduce the time from observations to science.  The team has delivered previously in this regard, providing the first comprehensive high-level data product package for an SDSS survey with MaNGA's\footnote{MaNGA: Mapping Nearby Galaxies at Apache Point Observatory, one of three core programs in SDSS-IV completing in 2020.  Bundy also serves as the MaNGA PI.  Westfall, the FOBOS Project Scientist, led development of MaNGA's Data Analysis Pipeline.} Data Analysis Pipeline \citep{westfall19} and its interactive public science platform, Marvin \citep{cherinka19}.  
+
+
+
+% \subsection{Research Community Priority} 
+% \label{sec:community}
+
+% The need for spectroscopic follow-up in the LSST era was made clear in
+% the National Research Council's 2015 report, ``Optimizing the U.S.
+% Ground-Based Optical and Infrared Astronomy System'' \citep{NAP21722}:
+% %
+% \noindent\begin{center}\mbox{\parbox{0.95\linewidth}{
+% %
+% The National Science Foundation should support the development of a
+% wide-field, highly multiplexed spectroscopic capability on a medium- or
+% large-aperture telescope in the Southern Hemisphere to enable a wide
+% variety of science, including follow-up spectroscopy of Large Synoptic
+% Survey Telescope targets. Examples of enabled science are studies of
+% cosmology, galaxy evolution, quasars, and the Milky Way.
+% %
+% }}\end{center}
+
+% Workshops organized by the National Optical Astronomy Observatory (NOAO)
+% in 2013 and 2016, the latter at the NSF's request, reported specific
+% spectroscopic needs for LSST follow-up in all science areas.  In
+% particular, the 2016 report notes that a critical resource in need of
+% prompt development is to ``Develop or obtain access to a highly
+% multiplexed, wide-field optical multi-object spectroscopic capability on
+% an 8m-class telescope.''  Based on these recommendations, we propose the
+% FOBOS instrument coupled with a suite of data-driven tools to address
+% the spectroscopic requirements of LSST and other photometric surveys at
+% a final cost 20 times less than a new Southern Hemisphere facility.
+% Located in Hawaii, FOBOS can access more than 70\% of the LSST
+% footprint, more than adequate for building powerful
+% spectroscopic training sets.  Compared to the Prime Focus Spectrograph
+% (PFS) on Japan's Subaru Telescope, FOBOS would be 1.7$\times$ faster,
+% provide unique UV sensitivity (0.31--1 $\mu$m compared to
+% 0.38--1.25 $\mu$m with PFS), and offer higher-density, more flexible
+% target sampling over ``deep-drilling'' fields.  Unlike PFS, FOBOS would be operated
+% on a U.S.\ telescope with dedicated U.S.\ access and a commitment to
+% supporting U.S.-led imaging facilities.  FOBOS is also complementary to
+% future telescopes and instruments that would be optimized to cover wider areas
+% (several deg$^2$ per pointing) at shallower depths.
+
+%\comment{mention FOBOS can do PI-led science too}
+
+% The need for deep spectroscopic follow-up is particularly acute for the major cosmological probes to be carried out by
+% LSST, Euclid, and WFIRST, which all rely on ``photometric redshifts:'' measures of galaxy redshift, $z$
+% --- a direct proxy of distance and look-back time---based on imaging alone. \citet{newman15} summarize the case for a
+%     significant spectroscopic campaign to calibrate and train LSST photometric redshifts in order to improve cosmological constraints.  They describe a redshift survey that,
+%     if carried out with FOBOS, would increase LSST's Dark Energy figure-of-merit by 40\% at a cost of less than 5\% of
+%     the LSST budget.  The urgent case for spectroscopic redshift training has been the subject of numerous publications
+%     \citep[e.g.,][]{laureijs11, masters15, hemmati18}.
+
+% Meanwhile, the astronomy community recognizes that the coming ``Big
+% Data'' era, culminating in LSST, necessitates ``\textbf{harnessing the
+% data revolution}.''  Widespread community interest in advanced
+% data-science techniques continues to grow amidst calls for educational
+% programs, conference series, and research funding to support the growth
+% of a new field, ``Astroinformatics,'' which exploits the interface
+% between astrophysics and statistics \citep{borne09}.  Astronomy's
+% largest organizations, including the American Astronomical Society and
+% the International Astronomical Union, have supported active working
+% groups on astroinformatics and astrostatistics since 2015.  LSST itself
+% has supported the Informatics and Statistics Science Collaboration and
+% partnered with NSF on the Data Science Fellowship Program to train
+% astronomy graduate students in data-science techniques.  Our proposal
+% builds on and contributes to these ongoing efforts.
 
 %-----------------------------------------------------------------------
 %-----------------------------------------------------------------------
@@ -471,6 +460,16 @@ the three four-armed FOBOS spectrographs.}
 \end{figure}
 
 We summarize major FOBOS sub-systems below based on the current conceptual design.  We propose to advance all components to a state of Preliminary Design readiness.  Our risk register assigns the highest risk levels to 1) Starbugs positioners (adhesion and control), 2) Micro fore-optics at the fiber input (alignment and process control), 3) Calibration system performance (uniformity and stability).
+
+\begin{wrapfigure}{r}{0.3\textwidth}\small
+%
+\includegraphics[width=0.3\textwidth]{figs/starbugs_v1.jpg}
+%
+\caption{Starbugs fiber positioners.}
+%
+\label{fig:org}
+%
+\end{wrapfigure}
 
 \noindent \textbf{Focal Plane System.} Mounted at the Nasmyth focus of Keck II Telescope at WMKO (Fig \ref{fig:layout}), FOBOS is a modular instrument
 composed of several major system.  Telescope light passes through the first two 946 mm diameter lenses of a 3-lens
@@ -562,7 +561,7 @@ science platform for visualization and analysis.
 
 
 
-\section{Broader Impacts}
+\section{Broader Impacts and Student Training}
 \label{sec:bi}
 
 \subsection{Akamai: Training the next generation of Hawaiian STEM
@@ -607,7 +606,7 @@ postdocs, and staff.  The {\bf Science Internship Program} (SIP) creates a simil
  served as research mentors in these programs.
 
 
-\subsection{Management}
+\section{Project Management}
 
 \begin{figure}[h!]
 %

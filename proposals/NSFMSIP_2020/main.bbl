@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{8}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Barnes} et~al.(2018){Barnes}, {Ball}, {Starr}, {Seagroves}, {Perez},
@@ -8,6 +8,16 @@
   Akamai Internship Program in Hawai'i},'' In {\em 2018 ASEE Annual Conference
   \& Exposition\/}, ASEE Conferences, Salt Lake City, Utah, 2018,
   https://peer.asee.org/31030
+
+\bibitem[{Cherinka} et~al.(2019){Cherinka}, {Andrews}, {S{\'a}nchez-Gallego},
+  {Brownstein}, {Argudo-Fern{\'a}ndez}, {Blanton}, {Bundy}, {Jones}, {Masters},
+  {Law}, {Rowlands}, {Weijmans}, {Westfall}, and {Yan}]{cherinka19}
+{Cherinka}, B; {Andrews}, BH; {S{\'a}nchez-Gallego}, J; {Brownstein}, J;
+  {Argudo-Fern{\'a}ndez}, M; {Blanton}, M; {Bundy}, K; {Jones}, A; {Masters},
+  K; {Law}, DR; {Rowlands}, K; {Weijmans}, AM; {Westfall}, K; {Yan}, R.
+  ``{Marvin: A Tool Kit for Streamlined Access and Visualization of the SDSS-IV
+  MaNGA Data Set},'' {\em \aj\/}, v. 158(2), 2019, p.~74.
+  \url{https://ui.adsabs.harvard.edu/abs/2019AJ....158...74C}
 
 \bibitem[{Dorman} et~al.(2012){Dorman}, {Guhathakurta}, {Fardal}, {Lang},
   {Geha}, {Howley}, {Kalirai}, {Bullock}, {Cuilland re}, {Dalcanton},
@@ -75,5 +85,21 @@
   {Wechsler}, RH; {Wood-Vasey}, WM; {Zentner}, AR. ``{Spectroscopic needs for
   imaging dark energy experiments},'' {\em Astroparticle Physics\/}, v.~63,
   2015, p. 81--100
+
+\bibitem[{Westfall} et~al.(2019){Westfall}, {Cappellari}, {Bershady}, {Bundy},
+  {Belfiore}, {Ji}, {Law}, {Schaefer}, {Shetty}, {Tremonti}, {Yan}, {Andrews},
+  {Brownstein}, {Cherinka}, {Coccato}, {Drory}, {Maraston}, {Parikh},
+  {S{\'a}nchez-Gallego}, {Thomas}, {Weijmans}, {Barrera-Ballesteros}, {Du},
+  {Goddard}, {Li}, {Masters}, {Ibarra Medel}, {S{\'a}nchez}, {Yang}, {Zheng},
+  and {Zhou}]{westfall19}
+{Westfall}, KB; {Cappellari}, M; {Bershady}, MA; {Bundy}, K; {Belfiore}, F;
+  {Ji}, X; {Law}, DR; {Schaefer}, A; {Shetty}, S; {Tremonti}, CA; {Yan}, R;
+  {Andrews}, BH; {Brownstein}, JR; {Cherinka}, B; {Coccato}, L; {Drory}, N;
+  {Maraston}, C; {Parikh}, T; {S{\'a}nchez-Gallego}, JR; {Thomas}, D;
+  {Weijmans}, AM; {Barrera-Ballesteros}, J; {Du}, C; {Goddard}, D; {Li}, N;
+  {Masters}, K; {Ibarra Medel}, HJ; {S{\'a}nchez}, SF; {Yang}, M; {Zheng}, Z;
+  {Zhou}, S. ``{The Data Analysis Pipeline for the SDSS-IV MaNGA IFU Galaxy
+  Survey: Overview},'' {\em arXiv e-prints\/}, 2019, p. arXiv:1901.00856.
+  \url{https://ui.adsabs.harvard.edu/abs/2019arXiv190100856W}
 
 \end{thebibliography}

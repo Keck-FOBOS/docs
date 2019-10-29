@@ -4,45 +4,45 @@ The top-level auxiliary file: main.aux
 The style file: nsf.bst
 Database file #1: ../../references.bib
 Warning--empty pages in asee_peer_31030
-You've used 6 entries,
+You've used 8 entries,
             2925 wiz_defined-function locations,
-            706 strings with 8473 characters,
-and the built_in function-call counts, 9921 in all, are:
-= -- 740
-> -- 1066
-< -- 9
-+ -- 399
-- -- 393
-* -- 1131
-:= -- 1742
-add.period$ -- 9
-call.type$ -- 6
-change.case$ -- 164
-chr.to.int$ -- 6
-cite$ -- 7
-duplicate$ -- 189
-empty$ -- 391
-format.name$ -- 399
-if$ -- 1871
+            722 strings with 9865 characters,
+and the built_in function-call counts, 13911 in all, are:
+= -- 1068
+> -- 1432
+< -- 12
++ -- 536
+- -- 528
+* -- 1567
+:= -- 2394
+add.period$ -- 13
+call.type$ -- 8
+change.case$ -- 219
+chr.to.int$ -- 8
+cite$ -- 9
+duplicate$ -- 267
+empty$ -- 578
+format.name$ -- 536
+if$ -- 2658
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 6
-newline$ -- 22
-num.names$ -- 24
-pop$ -- 157
+missing$ -- 8
+newline$ -- 28
+num.names$ -- 32
+pop$ -- 209
 preamble$ -- 1
-purify$ -- 155
+purify$ -- 208
 quote$ -- 0
-skip$ -- 149
+skip$ -- 225
 stack$ -- 0
-substring$ -- 639
-swap$ -- 81
-text.length$ -- 9
+substring$ -- 1022
+swap$ -- 126
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 54
+type$ -- 72
 warning$ -- 1
-while$ -- 27
+while$ -- 37
 width$ -- 0
-write$ -- 72
+write$ -- 95
 (There was 1 warning)

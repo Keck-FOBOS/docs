@@ -1,0 +1,376 @@
+%\documentclass[11pt,letterpaper]{article}
+\documentclass[oneside,11pt]{amsart}
+
+%\usepackage{a4wide}
+%\usepackage{epsfig}
+%\usepackage{psfig}
+\usepackage{graphicx}
+\usepackage{natbib,latexsym,url,enumitem,pdfpages}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage[belowskip=-10pt,aboveskip=0pt]{caption}
+
+\captionsetup{
+    justification=justified,
+    margin=0pt,
+    font=small}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Allow for the okina; thanks to:
+% https://tex.stackexchange.com/questions/424535/how-to-type-a-proper-hawai%CA%BBian-%CA%BBokina
+
+\usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+%\usepackage{libertine}
+
+\DeclareRobustCommand{\okina}{%
+  \raisebox{\dimexpr\fontcharht\font`A-\height}{%
+    \scalebox{0.8}{`}%
+  }%
+}
+\newunicodechar{ʻ}{\okina}
+\newcommand{\hawaii}{Hawaiʻi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\arcsec}{\mbox{$^{\prime\prime}$}}
+\newcommand{\gt}{$>$}
+
+% Some fancy commenting
+\definecolor{todo}{RGB}{200,0,0}
+\newcommand{\comment}[2][todo]{{\color{#1}[[{\bf #2}]]}}
+
+% Challenge counter
+\newcounter{chalno}
+\newcommand{\chal}[1]{\refstepcounter{chalno}\label{#1}}
+
+% User commands
+\input{journaldefs}
+
+\DeclareRobustCommand{\gtrsim}{%
+\mathrel{\hskip-.5em\begin{array}{c}>\\[-8pt]\sim\end{array}\hskip-.5em}}
+\DeclareRobustCommand{\lesssim}{%
+\mathrel{\hskip-.5em\begin{array}{c}<\\[-8pt]\sim\end{array}\hskip-.5em}}
+
+
+\pretolerance=10000
+\textwidth=6.4in
+\textheight=8.95in
+\voffset = 0.in
+%\voffset = -0.3in  % For my printer
+\topmargin=0.0in
+\headheight=0.00in
+\hoffset = 0.0in
+%\hoffset = 0.33in  %  For my printer
+\headsep=0.00in
+\oddsidemargin=0in
+\evensidemargin=0in
+\parindent=2em
+\parskip=0.2ex
+ 
+\renewcommand{\baselinestretch}{1.03}
+
+\special{papersize=8.5in,11in}
+
+\newcommand{\markus}{\textcolor{green}}
+
+\setlength{\parskip}{0.6 ex plus 0.4ex minus 0.2ex} \flushbottom
+\pagestyle{plain} 
+
+\begin{document}
+% \thispagestyle{empty}
+
+\pagenumbering{arabic}
+
+\vspace*{-1.5cm}
+
+\centerline{\textsf {\Large FOBOS: A Next-Generation Spectroscopic Facility}}
+\centerline{\textsf {\large Response to Astro2020 Request for Information}}
+
+\setcounter{page}{1}
+
+\section*{Executive Summary}
+
+% - Summarize your science objectives and your technical implementation at
+%   a high level.
+
+\noindent{\bf Science objectives:} FOBOS, the Fiber-Optic Broadband
+Optical Spectrograph, is a facility-class, general-purpose
+spectrograph for the 10m Keck II telescope. It emphasizes UV
+sensitivity (up to the atmospheric limit), high multiplex, multiple
+focal-plane sampling formats, and near Poissonian-level performance
+over extremely long ($\sim$100 hr) integration times. These emphases
+establish FOBOS's uniqueness among the suite of spectrographs coming
+online for 8-10m class telescopes in the next decade. FOBOS is
+specifically built to enable the deep spectroscopic follow-up of
+upcoming large-scale imaging surveys (LSST, WFIRST, and Euclid)
+identified as a significant need of the astronomy community in the US
+and beyond. For example, capitalizing on the combined $\approx$\$4B
+the US is investing in these imaging surveys, FOBOS can increase
+LSST's dark-energy figure-of-merit by 40\% (Newman et al.\ 2015).
+
+\smallskip
+
+\noindent{\bf Technical implementation:} FOBOS is a fiber-fed,
+fixed-format spectrograph. Its primary systems include (1) a
+compensating lateral atmospheric dispersion corrector (CLADC), (2) a
+robotic fiber-positioning system based on AAO's Starbug technology,
+(3) micro-assembly fore-optics required to optimally couple the Keck
+II input beam to the fiber feed, (4) 10m-long fiber trains that
+provide at least three focal-plane sampling options (single fibers,
+multiple small IFUs, and a single large-format IFU), and (5) a bank
+of three 4-channel spectrographs that provide a simultanous spectral
+range of 0.31-1 $\mu$m at a resolution of $R\sim3500$ across the full
+band.
+
+\smallskip
+
+% - Summarize the technology maturity of your implementation, listing the
+%   demonstrated technologies and the technologies requiring development.
+
+\noindent{\bf Technological maturity:} FOBOS is nearing the end of
+its conceptual design phase, and will begin its preliminary design
+phase in Oct 2020, contingent on funding. Components of this document
+represent significant improvements in FOBOS's design since the
+completion of our Astro2020 submission. Although requiring
+significant design work, FOBOS's backend systems are built on
+well-established technologies: FOBOS's spectrographs and fiber train
+inherit significantly from SDSS, MaNGA, and DESI designs. FOBOS's
+front-end leverages the more than 15 years of development of the
+Starbugs position system, which have been deployed and are in the
+final commissioning stages for the TAIPAN instrument on the AAT.
+Further development of the Starbugs technology is needed for use in
+FOBOS; however this represents a 2nd-generation implementation of the
+technology and will leverage simultaneous development of the
+GMT/MANIFEST instrument. Further development of the micro-assembly
+fore-optics is also necessary; prototypes are currently being
+developed with potential industry partners and tested at UCO/UCB.
+
+\smallskip
+
+% - Summarize areas where the data to support this RFI are not currently
+%   available.
+
+\noindent{\bf Limitations of this RFI:} Given this early stage in
+development, particular project components with limited extant
+data/information to address this RFI are as follows:
+
+\newpage
+
+\section{Science}
+
+% - Briefly describe the scientific objectives and the most important
+%   measurements required to fulfill these objectives. Feel free to refer
+%   to science white papers or references from the literature.
+% - Of the objectives, which are the most demanding? Why?
+% - Present the highest-level technical requirements (e.g. spatial and
+%   spectral resolution, sensitivity, timing accuracy) and their relation
+%   to the science objectives.
+% - For each performance requirement identified, describe as
+%   quantitatively as possible the sensitivity of the science objectives
+%   to achieve the requirement.  If you fail to meet a key requirement,
+%   what would be the impact on achieving the science objectives?
+
+\section{Enabling Technology}
+
+% - Please provide information describing new enabling technologies
+%   required for activity success.
+% - Please indicate any non-US technology required for activity success
+%   and what back up plans would be required if only US participation
+%   occurred. 
+% - For any technologies that have not been demonstrated by sub-scale or
+%   full-scale models as of this request, please describe the rationale
+%   for your technical maturity assessment, including the description of
+%   analysis or hardware development activities to date, and its
+%   associated technology maturation plan.
+% - Describe the aspect of the enabling technology that is critical to the
+%   concept’s success, and the sensitivity of mission performance if the
+%   technology is not realized or is only partially realized.
+% - Provide cost and schedule assumptions by year for all development
+%   activities, and the efforts that allow the technology to be ready when
+%   required, as well as an outline of readiness tests to confirm
+%   technical readiness level.
+
+% I don't think this is relevant to FOBOS:
+
+\section{Telescope}
+
+Not applicable.
+ 
+% - Provide an overview description of the characteristics and
+%   requirements of the optical telescope(s), antenna(s), or collector(s)
+%   highlighting key capabilities and any residual technology risks. 
+% - Provide diagrams or drawings showing the observatory or antenna array
+%   with the instruments and other components labeled and a descriptive
+%   caption.
+% - Please provide any available review packages (e.g. Conceptual Design
+%   Review, Preliminary Design Review) that describe the scope of
+%   technical design and implementation.
+% - Please describe any hardware/software with significant heritage.
+% - Please fill out the table below regarding the primary scientific
+%   equipment (e.g., Telescope or Antenna Array). Expand, contract, or
+%   modify this table as necessary and applicable.
+% - Identify and describe the three components of lowest technical
+%   maturity, and explain how and when these components will be
+%   demonstrated in hardware.
+% - What are the three greatest risks to cost, schedule, and performance?
+% - Describe any aspect of the design or implementation that may require
+%   non-US participation.
+
+\section{Instrumentation}
+
+% - Describe the proposed science instrumentation, and briefly state the
+%   rationale for selection. Discuss the capabilities of each instrument
+%   (Inst #1, Inst #2 etc.) and how the instruments are used together.
+%   Indicate whether cryogens or other cooling are required. 
+% - Briefly describe any concept, feasibility, or definition studies
+%   already performed and please provide any available Review Packages
+%   (e.g., Conceptual Design Review, Preliminary Design Review) that
+%   describe the instrument and its design and implementation.
+% - Indicate the technical maturity level of the major elements and the
+%   specific instrument maturity of the proposed instrumentation (for each
+%   specific Inst #1, Inst#2 etc.), along with the rationale for the
+%   assessment (i.e. examples of heritage, existence of breadboards,
+%   prototypes, mass/volume and power comparisons to existing units, etc.
+%   and any identifications of major long lead items). 
+% - For instrument operations, provide a brief functional description of
+%   operational modes, and calibration schemes. This can be documented in
+%   the Operations Section. Describe the level of complexity associated
+%   with analyzing the data to achieve the scientific objectives of the
+%   investigation. Describe the types of data (e.g. bits, images).
+% - Please fill out the table below regarding each instrument (if
+%   applicable). Copy as needed for all instruments. Expand this table as
+%   necessary and applicable.
+% - What are the three primary technical issues or risks?
+% - Describe the heritage of the instruments and associated sub-systems.
+%   Indicate items that are to be developed, as well as any existing
+%   hardware or design heritage.
+% - Describe any instrumentation that may require non-US participation. 
+% - List instruments to be delivered as part of construction versus
+%   ongoing development when in operations.
+% - Discuss anticipated data rates and volumes, as well as plans for
+%   processing and archiving data.
+
+
+\begin{center}
+\footnotesize
+\begin{tabular}{| l | r | r |}
+\multicolumn{3}{c}{\large \bf FOBOS Instrument Table} \\
+\hline
+{\bf Item} & {\bf Value} & {\bf Units} \\
+\hline
+\hline
+Type of instrument      & Multi-object spectrograph & \\\hline
+Number of spectrographs & 3 & \\\hline
+Multiplex & 1800 & single fibers \\
+                        & 45 & 37-fiber IFU \\
+                        & 1 & 1641-fiber IFU \\\hline
+Field of view: Patrol   & 315 & arcmin$^2$ \\\hline
+Field of view: Fiber    & 0.5 & arcsec$^2$ \\\hline
+Field of view: Mini-IFU & 25 & arcsec$^2$ \\\hline
+Field of view: Large-IFU & 705 & arcsec$^2$ \\\hline
+Spectral range          & 0.31-1 & $\mu$m \\\hline
+Spectral resolution     & 3500 & $R=\lambda/\delta\lambda$ \\\hline
+Number of detectors     & 12 & 4 per spectrograph \\\hline
+Detector size           & 6k $\times$ 6k & \\\hline
+Thermal requirements    & & \\\hline
+Size: Spectograph bank  & & m $\times$ m $\times$ m \\\hline
+Size: Focal-plane module & & m $\times$ m $\times$ m \\\hline
+Data volume             & $<$100 & Gb \\\hline
+Development Schedule    & 100 & months \\\hline
+\end{tabular}
+\label{tab:instrument}
+\end{center}
+
+\section{Facilities}
+
+% - If a site is not yet selected for the project, describe the
+%   anticipated approach to conducting site studies, obtaining site
+%   permissions, and executing environmental impact studies.
+% - Please provide any available site plans. If such plans already address
+%   items 2-5 below, these items do not need to be addressed separately.
+% - Describe the site and its location, including size, altitude, access,
+%   number of buildings, size of building(s) footprint and volume,
+%   existing infrastructure, power, internet, environmental considerations
+%   and logistics (proximity to major airport, housing and support for
+%   construction crews and facility staff etc.).
+% - Identify which facilities will be new and which facilities may be
+%   pre-existing. Describe any existing facilities and their estimated
+%   remaining useful life. Describe any upgrades to existing facilities
+%   that will be undertaken. Describe any anticipated shared use of site
+%   facilities between the concept being proposed and existing telescopes.
+% - For antenna arrays, provide specific infrastructure required such as
+%   concrete pad size, communications buildings, etc. for each element in
+%   the array. For telescope mirrors, describe infrastructure needed for
+%   mirror maintenance, e.g. coating facilities.
+% - Describe atmospheric and radio frequency interference (RFI)
+%   characteristics of the site insofar as they would affect observations
+%   with the concept being proposed.
+
+\section{Operations \& Observation Strategy}
+
+% - Please provide operations plans or documents (Concept of Operations). 
+% - Provide a description of the facility operations. For example: number
+%   of staff required, position types, and 24-hour operation requirements.
+% - Provide a description of the science operations. For example:
+%   pre-observational planning, data processing/reduction required,
+%   coordination with other facilities.
+% - Discuss observatory efficiency, e.g. the impact of maintenance and
+%   engineering and calibration time on faction of science time
+%   availability.
+% - Describe scope of engineering activities and time (day or night)
+%   needed to maintain calibration and health of telescope/array and
+%   instruments.
+% - Summarize key software development and any science development
+%   required.
+% - Summarize any archiving requirements. 
+% - Describe any high-level safety policies that will be required for
+%   items of particular safety concern.
+
+\section{Programmatic Issues \& Schedule}
+
+% - Please provide a programmatic overview that describes the structure of
+%   the overall organization including any international partners or
+%   university partners etc. and any money or hardware they are providing.
+%   Clearly indicate schedule and costs to date highlighting what has
+%   already been delivered and/or clearly capturing progress to date, if
+%   applicable.
+% - Please describe any funding availability challenges and the total
+%   impact it had, or may have, to cost and schedule.  Has all required
+%   funding been committed?  If not, please explain.  Highlight in-kind
+%   contributions in the past and planned from partners.  Clearly describe
+%   what the NSF/DOE/Fed Gov funding request is and what it buys.
+% - Please describe any unexpected challenges, key risks, and/or current
+%   outstanding risks that require(d) significant mitigation which
+%   affect/affected cost & schedule.
+% - Describe the current top 3 risks to the development of the facility,
+%   and proposed mitigation strategies. Please provide a top-level
+%   schedule.
+
+\section{Cost}
+
+% - Provide a high-level facility unique Work Breakdown Structure (WBS)
+%   with definitions. 
+% - Fill out the cost estimate tables below using the broad bins provided.
+%   Note the tables are divided into US Only and with International
+%   Partners.  
+% - Provide a basis of estimate for project WBS elements at the highest
+%   levels (i.e., systems and major subsystems, as indicated in the cost
+%   tables below), including internal overhead rates that are applied to
+%   costs for labor.  Describe approach or methodology for highest cost
+%   element estimates such as analogies, models, expert judgement,
+%   construction bids, etc.  Describe cost assumptions made for each
+%   element such as any production learning curves, labor and major
+%   procurements.  Identify major subcontracted procurements and
+%   associated vendors if available.  The “Prior” column is meant to be
+%   actual costs incurred. 
+
+
+%\newpage
+%
+%\setcounter{page}{1}
+%\bibliographystyle{nsf.bst}
+%\bibliography{references}
+
+\end{document}
+
+

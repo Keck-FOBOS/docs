@@ -4,7 +4,7 @@
 %\usepackage{epsfig}
 %\usepackage{psfig}
 \usepackage{graphicx}
-\usepackage{natbib,latexsym,url,enumitem,pdfpages}
+\usepackage{natbib,latexsym,url,enumitem,pdfpages,multicol}
 \usepackage{color}
 \usepackage{wrapfig}
 \usepackage[belowskip=-10pt,aboveskip=0pt]{caption}
@@ -111,7 +111,7 @@ upcoming large-scale imaging surveys (LSST, WFIRST, and Euclid)
 identified as a significant need of the astronomy community in the US
 and beyond. For example, capitalizing on the combined $\approx$\$4B
 the US is investing in these imaging surveys, FOBOS can increase
-LSST's dark-energy figure-of-merit by 40\% (Newman et al.\ 2015).
+LSST's dark-energy figure-of-merit by 40\% \citet{newman15}.
 
 \smallskip
 
@@ -187,11 +187,9 @@ requirements. These key programs are:
 billions of sources in deep-imaging campaigns, like LSST, WFIRST, and
 Euclid, will hinge on the use of photometric redshifts (photo-$z$s).
 FOBOS observations that target $\sim$15k sources with $24 > i_{\rm
-AB} > 25.3$ in specific regions of galaxy color space (cf.\
-\comment{Masters et al.}) can dramatically improve the photo-$z$
+AB} > 25.3$ in specific regions of galaxy color space \citep[see][]{masters15, masters19} can dramatically improve the photo-$z$
 accuracy applied to the full LSST sample, equivalent to an {\em
-increase of LSST's dark energy figure-of-merit by 40\%} (Newman et
-al.\ \comment{refs}). The {\it key instrument requirements} derived
+increase of LSST's dark energy figure-of-merit by 40\%} \citep{newman15}. The {\it key instrument requirements} derived
 from this program are (1) the blue wavelength coverage (down to the
 atmospheric limit) to eliminate the usual "redshift desert", (2)
 long-term stability of the instrument to allow for
@@ -227,8 +225,7 @@ two-dimensional kinematic data.
 existing and forthcoming spectrographs (e.g., PFS, MSE), FOBOS's high
 sampling density and IFU modes offer unique capabilities for
 efficiently mapping the high-source-density M31 disk. Building on
-previous imaging (PHAT; \comment{ref}) and spectroscopy (SPLASH;
-\comment{ref}) FOBOS will provide high-S/N spectra of $\sim$100k M31
+previous imaging \citep[PHAT][]{phat} and spectroscopy \citep[SPLASH][]{splash} FOBOS will provide high-S/N spectra of $\sim$100k M31
 disk stars that connect [Fe/H] and [$\alpha$/Fe] patterns to the
 underlying dynamics. FOBOS will use integral-field observations of
 $\sim$150 young stellar clusters that yield their present-day mass
@@ -248,7 +245,7 @@ instrument requirements} derived from this program parallel our
 previous programs and additionally motivate the monolithic
 integral-field unit.
 
-\comment{discuss community access here?}
+~\comment{discuss community access here?}
 
 Beyond the scope and requirements of these ``design reference''
 programs, {\bf FOBOS enables a broad range of observations}, e.g.:
@@ -790,7 +787,7 @@ five main interdependent subsystems and an overarching application
 program interface (API), {\it the Manager}, that allows for
 communication between these systems. These five sub-systems are:
 
-\comment{emphasize partners more here}
+~\comment{emphasize partners more here}
 
 \begin{enumerate}
 %
@@ -846,6 +843,7 @@ with NSF's OIR lab and its Community Science and Data Center (CSDC).
 
 \section{Programmatic Issues \& Schedule}
 
+
 % - Please provide a programmatic overview that describes the structure of
 %   the overall organization including any international partners or
 %   university partners etc. and any money or hardware they are providing.
@@ -884,11 +882,13 @@ with NSF's OIR lab and its Community Science and Data Center (CSDC).
 %   actual costs incurred. 
 
 
-%\newpage
-%
-%\setcounter{page}{1}
-%\bibliographystyle{nsf.bst}
-%\bibliography{references}
+\newpage
+
+\begin{multicols}{2}
+\scriptsize
+\bibliographystyle{apj}
+\bibliography{references}
+\end{multicols}
 
 \end{document}
 

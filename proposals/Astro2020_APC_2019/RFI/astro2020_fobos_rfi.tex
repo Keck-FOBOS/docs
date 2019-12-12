@@ -32,6 +32,7 @@
 \newcommand{\hawaii}{Hawaiʻi}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newcommand{\arcmin}{\mbox{$^{\prime}$}}
 \newcommand{\arcsec}{\mbox{$^{\prime\prime}$}}
 \newcommand{\gt}{$>$}
 
@@ -98,9 +99,13 @@ Optical Spectrograph, is a facility-class, general-purpose
 spectrograph for the 10m Keck II telescope. It emphasizes UV
 sensitivity (up to the atmospheric limit), high multiplex, multiple
 focal-plane sampling formats, and near Poissonian-level performance
-over extremely long ($\sim$100 hr) integration times. These emphases
-establish FOBOS's uniqueness among the suite of spectrographs coming
-online for 8-10m class telescopes in the next decade. FOBOS is
+over extremely long ($\sim$100 hr) integration times. Its flexible
+position system enables advanced techniques for merging multiple
+observing programs, including a constant fraction of fibers (5-10\%)
+allocated to the full US community amounting to $\sim$100,000
+fiber-hours per year. This establishes FOBOS's uniqueness, both in
+term of functionality and access, among the suite of spectrographs
+coming online for 8-10m class telescopes in the next decade. FOBOS is
 specifically built to enable the deep spectroscopic follow-up of
 upcoming large-scale imaging surveys (LSST, WFIRST, and Euclid)
 identified as a significant need of the astronomy community in the US
@@ -142,7 +147,7 @@ Further development of the Starbugs technology is needed for use in
 FOBOS; however this represents a 2nd-generation implementation of the
 technology and will leverage simultaneous development of the
 GMT/MANIFEST instrument. Further development of the micro-assembly
-fore-optics is also necessary; prototypes are currently being
+fore-optics is also critical; prototypes are currently being
 developed with potential industry partners and tested at UCO/UCB.
 
 \smallskip
@@ -243,6 +248,8 @@ instrument requirements} derived from this program parallel our
 previous programs and additionally motivate the monolithic
 integral-field unit.
 
+\comment{discuss community access here?}
+
 Beyond the scope and requirements of these ``design reference''
 programs, {\bf FOBOS enables a broad range of observations}, e.g.:
 Milky Way and M31 halo stars and substructure; the Milky Way bulge;
@@ -274,18 +281,9 @@ galaxy spectra (e.g., Capak).
 
 \subsection{Top-level Requirements}
 
-FOBOS's current top-level requirements are provided in Table
-\ref{tab:reqs}; however, we caution that these are still under
-development.
-
-Deep exposures.  Keeping near Poissonian performance for 100 hours.
-
-
-% - For each performance requirement identified, describe as
-%   quantitatively as possible the sensitivity of the science objectives
-%   to achieve the requirement.  If you fail to meet a key requirement,
-%   what would be the impact on achieving the science objectives?
-
+Table \ref{tab:reqs} presents the top-level requirements for FOBOS as
+they stand at the time of this writting; however, we caution that
+these are still under development.
 
 \begin{table}[h!]
 \centering
@@ -297,20 +295,21 @@ Deep exposures.  Keeping near Poissonian performance for 100 hours.
 {\bf Description} & {\bf ID} & {\bf Requirement} & {\bf Goal} & {\bf Justification} \\
 \hline
 \hline
-Field of View & TOP.REQ.A01 & $D=17^{\prime}$ & $D=20^{\prime}$ & Maximum FoV matches full Keck-Nasmyth FoV \\
+Field of View & TOP.REQ.A01 & $D=17\arcmin$ & $D=20\arcmin$ & Maximum FoV matches full Keck-Nasmyth FoV \\
 \hline
-Single-fiber multiplex & TOP.REQ.A02 & 1800 &  & Achieve density of 6 arcmin$^2$ for $20^{\prime}$ FoV \\
+MOS-fiber multiplex & TOP.REQ.A02 & 1800 &  & Achieve density of 6 arcmin$^2$ for $20\arcmin$ FoV \\
 \hline
-Single-fiber aperture & TOP.REQ.A03 & $0.7^{\prime} < D < 1.3^{\prime}$ &  & Optimize S/N of extracted spectra given WMKO seeing distribution \\
+MOS-fiber aperture & TOP.REQ.A03 & $0.7\arcsec < D < 1.3\arcsec$ &  & Optimize S/N of extracted spectra given WMKO seeing distribution \\
 \hline
-Calibration bundles & TOP.REQ.A10 & 12 7-fiber bundles & & Flux calibration fidelity; four per spectrograph (Yan et al. 2016) \\
+Calibration mini-IFUs & TOP.REQ.A10 & 12 7-fiber bundles & & Flux calibration fidelity; four per spectrograph (Yan et al. 2016) \\
 \hline
-mini-IFU size & TOP.REQ.A04 & $\gtrsim$5\arcsec &  & Cover scales of $\gtrsim$20 kpc at $z=2-2.5$ \\
+MOS-IFU size & TOP.REQ.A04 & $\gtrsim$5\arcsec &  & Cover scales of $\gtrsim$20 kpc at $z=2-2.5$ \\
 \hline
-mini-IFU sampling & TOP.REQ.A05 & $\lesssim$0.8\arcsec & & Optimize extended-source spectroscopy \\
+MOS-IFU sampling & TOP.REQ.A05 & $\lesssim$0.8\arcsec & & Optimize extended-source spectroscopy \\
 \hline
-mini-IFU multiplex & TOP.REQ.A06 & 45 & & 37 fibers per IFU, 15 IFUs per spectrograph \\
+MOS-IFU multiplex & TOP.REQ.A06 & 45 & & 37 fibers per IFU, 15 IFUs per spectrograph \\
 \hline
+Monolithic IFU FoV & TOP.REQ.A11 & $D\sim$30\arcsec & & Maximum size for full fiber complement in a single IFU \\
 Wavelength coverage & TOP.REQ.A07 & 0.31 - 1 $\mu$m & & Eliminate redshift desert \\
 \hline
 Spectral Resolution & TOP.REQ.A08 & $R = 3500$ & & Subtraction of night-sky lines in the red \\
@@ -319,11 +318,39 @@ Throughput & TOP.REQ.A09 & $\gtrsim$30\% over 95\% of the bandpass & & Competiti
 \hline
 \end{tabular}
 \begin{tablenotes}
-\item Mini-IFU requirements above are optimized for the CGM science case; however, we expect additional IFU modes to be explored, including those that subsample the median Keck seeing (0.3 arcsec) and those that take advantage of a GLAO mode should one be available at Keck.
+\item MOS-IFU requirements above are optimized for the CGM science
+case; however, we expect additional IFU modes to be explored,
+including those that critically sample the median Keck seeing
+(0.6\arcsec) and those that take advantage of a GLAO mode when it is
+available at Keck.
 \end{tablenotes} 
 \label{tab:reqs}
 \end{threeparttable}
 \end{table}
+
+The most demanding aspects of our design-reference science programs
+on FOBOS's performance and instrument requirements are in its ability
+to reach near-Poisson level performance for very long integrations
+($\gtrsim$100-hr). Analysis of existing data from the MaNGA/SDSS-IV
+survey, a survey and instrument not meant to enable such long
+exposures, demonstrates a sky-subtraction fidelity of $\sim$0.2\%
+(Childress et al. 2017, MNRAS, 472, 273; Bundy et al., in prep; Gu et
+al.). Early commissioning data for DESI shows similar performance. A
+key aspect of our design and instrument simulation work during the
+instrument design phases will be to (re)assess the instrument,
+calibration, and data-reduction-software systems with respect to
+their expected performance over very long integration times. This
+work will continue to inform the relevant system requirements well
+into final design. Deviations from Poisson performance would lead to
+longer integration times for our Cosmology and CGM programs; however,
+the performance of current fiber-based instruments is such that we do
+not expect these deviations to be significant enough to render these
+programs infeasible.
+
+% - For each performance requirement identified, describe as
+%   quantitatively as possible the sensitivity of the science objectives
+%   to achieve the requirement.  If you fail to meet a key requirement,
+%   what would be the impact on achieving the science objectives?
 
 \section{Enabling Technology}
 \label{sec:tech}
@@ -332,9 +359,13 @@ Throughput & TOP.REQ.A09 & $\gtrsim$30\% over 95\% of the bandpass & & Competiti
 %   required for activity success.
 
 There are no fundamentally new technologies needed to enable the
-FOBOS concept to move ahead. However, there are a few key
-technologies that either require modifications and development of
+FOBOS concept to be realized. However, there are a few key
+technologies that require new design innovations or modifications of
 existing designs for there specific use in FOBOS.
+
+% driven by low-risk
+
+% LRS2 microlens arrays, full re-imaging system (very hard alignment problem, but lots of real-estate; PFS has microlens on the fiber, but bonded)  Need for airgap, Starbugs packaging
 
 FOBOS's conceptual design includes fused-silica etched (FSE) gratings
 in each channel of our 4-channel spectrographs. To date, FSE gratings
@@ -361,7 +392,7 @@ and serves as the drive surface for the Starbugs positioning system
 (see below). This orientation dramatically decreases the risk of
 Starbug adhesion failures on the drive surface.
 \item Development and process testing of micro-assembly foreoptics
-composed of single lenses for single-fiber apertures and micro-lens
+composed of single lenses for single-fiber apertures and microlens
 arrays for integral-field apertures.
 \item Integration of both single-aperture and multi-aperture arrays
 assemblies in the Starbugs piezo assembly.
@@ -375,6 +406,13 @@ simultaneously used in a positioning system.
 
 \subsection{Non-US Technologies}
 \label{sec:starbugs}
+
+The fused-silica etched gratings in our current design are a
+proprietary technology of the Fraunhofer Institute for Applied Optics
+and Precision Engineering (IOF) in Germany. The IOF produce the most
+efficient FSE gratings in the world, as needed for the unique
+sensitivity requirements for FOBOS and particularly in its UV channel
+(see above).
 
 The FOBOS robotic focal-plane positioning system uses the Starbugs
 technology, developed exclusively by Australian Astronomical Optics
@@ -456,6 +494,15 @@ design phase.
 
 \section{Instrumentation}
 
+\begin{figure}[h!]
+\vskip -0.1in
+\includegraphics[width=\textwidth]{FOBOS_inst_2019-10-28.pdf}
+\caption{\small {\it Left}: Rendering of FOBOS instrument systems
+deployed at the Keck II Nasmyth port. {\it Right}: Optical layout of
+one of the three four-armed FOBOS spectrographs.}
+\label{fig:layout}
+\end{figure}
+
 % - Describe the proposed science instrumentation, and briefly state the
 %   rationale for selection. Discuss the capabilities of each instrument
 %   (Inst #1, Inst #2 etc.) and how the instruments are used together.
@@ -466,147 +513,164 @@ design phase.
 %   (e.g., Conceptual Design Review, Preliminary Design Review) that
 %   describe the instrument and its design and implementation.
 
-\subsection{Conceptual Design}
-
-\begin{figure}[h!]
-\vskip -0.1in
-\includegraphics[width=\textwidth]{FOBOS_inst_2019-10-28.pdf}
-\caption{\small {\it Left}: Rendering of FOBOS instrument systems
-deployed at the Keck II Nasmyth port. {\it Right}: Optical layout of
-one of the three four-armed FOBOS spectrographs.}
-\label{fig:layout}
-\end{figure}
-
-FOBOS inherited much from the conceptual design of a fiber-based
-opticl spectrograph for the Thirty-Meter Telescope in a
-trade/down-selection study for its Wide-Field Optical Spectrograph
-(WFOS); however, it is still in its conceptual design phase. No CDR
-package has yet been produced or included in response to this RFI.
+The current conceptual design of FOBOS inherited much from the
+concept of a fiber-based optical spectrograph for the Thirty-Meter
+Telescope in a trade/down-selection study for its Wide-Field Optical
+Spectrograph (WFOS). FOBOS is still in its conceptual design phase,
+and therefore no CDR package has yet been produced or included in
+response to this RFI.
 
 % - What are the three primary technical issues or risks?
 % - Describe any instrumentation that may require non-US participation. 
 
 The current conceptual designs for all FOBOS sub-systems are briefly
-described below. Our risk register assigns the highest risk levels
-to:
+described in the following subsections, with its instrument
+specifications summarized in Table \ref{tab:instrument}. We also
+briefly comment on the technical maturity and heritage of the
+components within each sub-system. Our risk register assigns the
+three highest risk levels to:
 %
 \begin{enumerate}
+\item the performance (uniformity and stability) of our calibration
+system and calibration procedures,
 \item the Starbugs positioning system (the only system provided by a
 non-US partner; see Section \ref{sec:starbugs}), specifically
-adhesion and control,
-\item the micro-assembly fore-optics, specifically their alignment
-and manufacturing and assembly process control, and
-\item the performance (uniformity and stability) of our calibration
-system and calibration procedures.
+adhesion and control, and
+\item the micro-assembly fore-optics, specifically the manufacturing,
+assembly, and alignment process control.
 \end{enumerate}
 
 \begin{wrapfigure}{r}{0.35\textwidth}
 \small
 \includegraphics[width=0.35\textwidth]{starbugs_v1.jpg}
-\caption{The Starbugs mounted at the focal plane of the AAT. Light
-enters from the bottom of the image, where red or gray ``slipper'' of
-each Starbug contacts a field plate and is adhered via a leaky
-vacuum. The white central area of each Starbug houses the single
-fiber apertures. For FOBOS, the contact surface will be the an
-optical element of the CLADC, always perpendicular to the gravity
-vector, and the Starbugs will be adapted to hold either a single
-aperture microlens assembly or an integral-field microlens array
-assembly.}
+\caption{Starbugs mounted at the focal plane of the AAT. Light
+enters from the image bottom, where the red or gray
+``slipper'' of each Starbug contacts a field plate and is adhered to
+it via a leaky vacuum. Each Starbug houses
+a single-fiber aperture (white). For FOBOS, the contact surface will be
+an optical element of the CLADC, always perpendicular to the
+gravity vector, and the Starbugs will be adapted to hold either a
+single-aperture microlens assembly or an integral-field microlens
+array.}
 \label{fig:org}
 \end{wrapfigure}
 
-\textbf{Focal Plane System.} Light from the Keck II telescope Nasmyth
-port (Fig \ref{fig:layout}) passes through the first two 946 mm
-diameter lenses of a 3-lens CLADC before encountering a 45$^\circ$
-mirror that folds the beam vertically upwards. The horizontal third
-lens of the CLADC is positioned at the focal plane above the fold
-mirror and serves as the mounting surface for downward-pointing
-Starbugs. The risk of Starbug adhesion loss and focal-plane coupling
-failure is significantly reduced by using a horizontal mounting
-surface (20$^\prime$ diameter). The mounting surface rotates to match
-the field rotation of the telescope as it tracks the sky. Each
-Starbug patrols zones of up to several arcminutes and can be placed
-as close as 10\arcsec. Three back-illuminated fibers embedded in the
-housing of each Starbug are combined with a fast, imaging metrology
-camera that enables reconfiguration times of as little as 2 minutes.
+\subsection{Focal-Plane Module}
 
-\noindent \textbf{Focal-Plane Sampling.} Microlens fore-optics
-coupled to each fiber demagnify and speed up the telescope beam from
-$f/15$ to $f/5$. This provides better coupling of the fiber to the
-telescope beam, minimizing losses from focal-ratio degradation, and
-provides an $0.8\arcsec$ on-sky diameter of each fiber.
-Integral-field observations are accomplished by coupling
-large-fill-factor microlens arrays to fiber bundles. Different
-Starbug designs accommodate and position one of these payloads in the
-focal plane. With stowage zones outside the focal plane, a day-time
-procedure switches between different fiber suites: 1) individual
-fibers, 600 per spectrograph; 2) A set of 15 multiplexed fiber-bundle
-IFUs (per spectrograph), each composed of 37 fibers and spanning up
-to 5.6\arcsec; 3) A 30\arcsec-wide monolithic IFU\footnote{This mode
-would be unique at Keck. KCWI+KCRM covers 0.36--1.0 $\mu$m and to
-achieve $R \sim 3600$ over the full bandpass, KCWI+KCRM reduces its
-FoV to 8.4 $\times$ 20.4 arcseconds, an area 5$\times$ smaller than
-the FOBOS monolithic IFU.} (1641 fibers). In all cases, $\sim$10\% of
-individual fibers are reserved for sky sampling and 5--10
-mini-bundles (7 fibers) collect flux calibration standard stars. The
+Light from the Keck II telescope Nasmyth port (Fig \ref{fig:layout};
+left) passes through the first two 946mm-diameter lenses of a 3-lens
+CLADC before encountering a 45$^\circ$ mirror that folds the beam
+vertically upwards. The third lens of the CLADC is horizontal with
+the surface always perpendicular to the gravity vector. Positioned at
+the focal plane of the telescope$+$CLADC optics, this also serves as
+the mounting surface for downward-pointing Starbugs. The risk of
+Starbug adhesion loss and focal-plane coupling failure is
+significantly reduced by using a horizontal mounting surface
+($20\arcmin$ diameter). The mounting surface rotates to match the
+field rotation of the telescope as it tracks the sky. Each Starbug
+patrols zones of up to several arcminutes and can be placed as close
+as 10\arcsec. Three back-illuminated fibers embedded in the housing
+of each Starbug are combined with a fast, imaging metrology camera
+that enables reconfiguration times of as little as 2 minutes. See
+Section \ref{sec:starbugs} for a discussion of their heritage,
+maturity, and advantages.
+
+\subsection{Focal-Plane Sampling \& Robotic Positioning System}
+
+Microlens fore-optics coupled to each fiber demagnify and speed up
+the telescope beam from $f/15$ to $f/5$. This provides better
+coupling of the fiber to the telescope beam --- minimizing losses
+from focal-ratio degradation --- and provides an $0.8\arcsec$ on-sky
+diameter of each fiber. Integral-field observations are accomplished
+by coupling large-fill-factor microlens arrays to fiber bundles. Team
+members have experience with microlens coupling to fibers
+(SDSS-III/APOGEE) and we are currently prototyping microlens optics
+and optomechanical assemblies for lab and on-sky testing. Lab testing
+is being performed at both UCO and UCB/SSL, and we are exploring
+partnerships for the at-scale manufacturing of these components.
+
+Separate Starbug designs will be produced to house either the
+single-fiber or integral-field assemblies. These Starbugs will be
+incorporated into separate modules that are stored outside the focal
+plane and can be exchanged with the module attached to the focal
+plane via a day-time procedure. This allows FOBOS to switch between
+different fiber suites: 1) individual fibers, 600 per spectrograph;
+2) A set of 15 multiplexed fiber-bundle IFUs (per spectrograph), each
+composed of 37 fibers and spanning up to 5.6\arcsec; 3) A
+30\arcsec-wide monolithic IFU\footnote{This mode would be unique at
+Keck. Compared to KCWI+KCRM, FOBOS's monolithic IFU will emphasize
+FoV over spatial resolution and blue sensitivity. KCWI+KCRM covers
+0.36--1.0 $\mu$m and to achieve $R \sim 3600$ over the full bandpass,
+KCWI+KCRM reduces its FoV to 8.4 $\times$ 20.4 arcseconds, an area
+5$\times$ smaller than the FOBOS monolithic IFU.} (1641 fibers). In
+all cases, $\sim$10\% of individual fibers are reserved for sky
+sampling and 5--10 mini-bundles (7 fibers) observe stars in the field
+for flux calibration and PSF monitoring.
+
+Current designs for both the mini-IFUs and the monolithic IFU flow
+from our science requirements; however, we are still exploring other
+possible modes, enabled by the flexibility of the Starbugs
+positioning system and focal-plane module design. In particular, our
 design will accept and take advantage of ground-layer adaptive optics
 (GLAO) corrections from an anticipated GLAO system at Keck II. GLAO
 improves depth, enables crowded source targeting, and opens new
 science territory through spatially-resolved galaxies beyond
-$z\sim0.5$.
+$z\sim0.5$. Particularly for the latter, we would expect to deploy an
+IFU mode that critically sampled the improved GLAO PSF.
 
-\textbf{Spectrographs.} Three spectrographs adjacent to the
-focal-plane module are fed by a short ($< 10$m) fiber run in order to
-preserve UV throughput. Stress-relief features in the cabling reduce
-focal-ratio degradation. Each spectrograph uses dichroics to divide
-the 140 mm diameter collimated beam into four wavelength channels
-with combined, instantaneous coverage from 0.31--1 $\mu$m.
-High-efficiency fused-silica etched (FSE) gratings provide
-mid-channel spectral resolutions of $R \sim 3500$ for all channels.
-The spectrographs use $f/2.25$ refractive cameras, with significant
-heritage from the the DESI spectrographs, with 6k$\times$6k, 15
-$\mu$m-pixels CCDs; the platescale is such that the images of the
-150$\mu$m fiber cores are sampled by 5 pixels. The spectrographs are
-mounted in a temperature-controlled housing. The spectrographs will
-be held at the expected local nighttime temperature; only the
-detectors will be cryogenically cooled using liquid N$_2$. The
-estimated end-to-end instrument throughput peaks at 60\% and is
-greater than 30\% at all wavelengths.
+\subsection{Fiber-feed \& Spectrographs}
 
-\noindent \textbf{Calibration System.} FOBOS has a comprehensive
-strategy for precise calibrations. Afternoon flat-field and arc-line
+Three spectrographs are mounted on the Nasmyth deck and connected to
+the adjacent focal-plane module (Fig \ref{fig:layout}; right) via a a
+short ($< 10$m) fiber run (not pictured) in order to preserve UV
+throughput (cf., the much longer fiber runs for prime-focus
+instruments, such as Subaru-PFS and DESI). Stress-relief features in
+the cabling reduce focal-ratio degradation. Our team has significant
+experience with fiber-fed spectrographs, drawing from SDSS and DESI
+heritage.
+
+Each of the three spectrograph uses dichroics to divide the 140 mm
+diameter collimated beam into four wavelength channels with combined,
+instantaneous coverage from 0.31--1 $\mu$m. High-efficiency
+fused-silica etched (FSE) gratings provide mid-channel spectral
+resolutions of $R \sim 3500$ for all channels. The spectrographs use
+$f/2.25$ refractive cameras and 6k$\times$6k, 15 $\mu$m-pixels CCD
+detectors. The camera platescale is such that the images of the
+150$\mu$m fiber cores are sampled by 5 pixels in all channels. Our
+spectrograph design draws significantly from the design of the DESI
+spectographs.
+
+The spectrographs are mounted in a permanent temperature-controlled
+housing, providing a stable environmental temperature ($\pm$1C). Heat
+rejection of electronics components in the dome is done through a
+glycol cooling loop. Cyrogenic cooling of the science detectors is
+provided by liquid N$_2$. The estimated end-to-end instrument
+throughput peaks at 60\% and is greater than 30\% at all wavelengths.
+
+\subsection{Calibration System}
+
+FOBOS has a comprehensive strategy for precise calibrations, drawing
+on significant heritage from purpose-built calibration systems for
+SDSS, DESI, and PFS. FOBOS's calibration system is critical to its
+ability to provide near-Poisson performance for very long
+integrations. Specific concerns involve the stability of the fiber
+input and output beams both between fibers and as a function of time
+for a given fiber.
+
+Our current concept for the calibration system and calibrations
+procedures are as follows. Afternoon flat-field and arc-line
 exposures will use a carefully illuminated interior dome screen,
-acquired specifically for FOBOS calibrations but also a general good
-for the Observatory. Nighttime calibrations involve re-orienting the
-fold mirror under the focal plane to accept light from a nearby light
-source and optical assembly that mimics the telescope pupil.
+acquired specifically for FOBOS calibrations but also as a general
+good for the Observatory. Nighttime calibrations involve re-orienting
+the fold mirror under the focal plane to accept light from a nearby
+light source and optical assembly that mimics the telescope pupil.
 Afternoon and relative fiber-to-fiber measurements from nighttime
 calibrations will be combined to model the instrument$+$sky response
 during observations.
 
-\subsection{Technical Maturity}
-
-% - Indicate the technical maturity level of the major elements and the
-%   specific instrument maturity of the proposed instrumentation (for each
-%   specific Inst #1, Inst#2 etc.), along with the rationale for the
-%   assessment (i.e. examples of heritage, existence of breadboards,
-%   prototypes, mass/volume and power comparisons to existing units, etc.
-%   and any identifications of major long lead items). 
-
-% - Describe the heritage of the instruments and associated sub-systems.
-%   Indicate items that are to be developed, as well as any existing
-%   hardware or design heritage.
-As stated (Section \ref{sec:tech}), the major design elements of
-FOBOS are based on proven technologies. Their general technical
-maturity and specific risk to the FOBOS design vary:
-
-% - Please fill out the table below regarding each instrument (if
-%   applicable). Copy as needed for all instruments. Expand this table as
-%   necessary and applicable.
-
 \begin{table}[h!]
 \centering
-\caption{FOBOS Instrument Table}
+\caption{FOBOS Instrument Specifications}
 \footnotesize
 \begin{tabular}{| l | r | r |}
 \hline
@@ -634,6 +698,21 @@ Development Schedule    & 100 & months \\\hline
 \end{tabular}
 \label{tab:instrument}
 \end{table}
+
+% - Indicate the technical maturity level of the major elements and the
+%   specific instrument maturity of the proposed instrumentation (for each
+%   specific Inst #1, Inst#2 etc.), along with the rationale for the
+%   assessment (i.e. examples of heritage, existence of breadboards,
+%   prototypes, mass/volume and power comparisons to existing units, etc.
+%   and any identifications of major long lead items). 
+
+% - Describe the heritage of the instruments and associated sub-systems.
+%   Indicate items that are to be developed, as well as any existing
+%   hardware or design heritage.
+
+% - Please fill out the table below regarding each instrument (if
+%   applicable). Copy as needed for all instruments. Expand this table as
+%   necessary and applicable.
 
 \section{Facilities}
 
@@ -669,43 +748,101 @@ Development Schedule    & 100 & months \\\hline
 %   with analyzing the data to achieve the scientific objectives of the
 %   investigation. Describe the types of data (e.g. bits, images).
 
+FOBOS is a general-purpose, facility-class instrument that is
+expected to integrate into the existing operational structure of the
+W.~M.~Keck Observatory. Other instruments will share use of the Keck
+II Nasmyth port used by FOBOS (e.g., KCWI), such that the focal-plane
+module will be regularly rolled in and out of position, using the
+rails pictured in Fig. \ref{fig:layout}. Given their size and our
+emphasis on spectrograph stability, however, FOBOS's spectrographs
+will be housed in a permanent, temperature-controlled stucture on the
+Nasymth deck.
 
-% - Please provide operations plans or documents (Concept of Operations). 
-% - Provide a description of the facility operations. For example: number
-%   of staff required, position types, and 24-hour operation requirements.
+FOBOS emphasizes flexibility in focal plane sampling, providing
+multiple focal-plane modules with different sampling options. These
+modules will be stored with the spectrograph structure and exchanged
+during a day-time procedure; i.e., a single focal-plane sampling
+option will be used in a given night. For a given focal-plane
+sampling mode, FOBOS will support various observing modes ranging
+from direct, PI-led control of the system to an automated, AI-led
+merging of multiple observing programs (see MAISTRO below).
+
 % - Provide a description of the science operations. For example:
 %   pre-observational planning, data processing/reduction required,
 %   coordination with other facilities.
+% - Summarize key software development and any science development
+%   required.
+% - Summarize any archiving requirements. 
+
+\subsection{Data Management System}
+
+FOBOS is a complex instrument, both in terms of its active hardware
+systems and in how it will be used. As such, FOBOS will require a
+sophisticated data management system, which governs all software
+related to planning and executing FOBOS observations, as well as the
+collection and processing of the resulting scientific data.
+Commensurate with FOBOS's development phase, we outline this system
+below. We note here that this system specifically does not include
+any software related to the operation or control of the FOBOS
+mechanisms or their components. Operational software is handled by a
+separate WBS element. The FOBOS data-management system is broken into
+five main interdependent subsystems and an overarching application
+program interface (API), {\it the Manager}, that allows for
+communication between these systems. These five sub-systems are:
+
+\comment{emphasize partners more here}
+
+\begin{enumerate}
+%
+\item {\it The Doctor}: FOBOS will maintain a database of metadata
+that monitors the current state of the instrument, a historical
+record of the state of the site, telescope, and instrument at the
+time of the observations, and figures-of-merit for the quality of the
+data produced.
+%
+\item {\it The Producer}: FOBOS will provide a holistic software
+package to plan full, multiple-pointing observing programs. This is
+divided into two subsystems: (1) {\it MAISTRO}, Modular Artificial
+Intelligence System for Target Reallocation and Observing, an
+``artificial intelligence'' (AI) targeting system that will learn
+optimization strategies for user-controlled and multi-program target
+assignment, and (2) {\it the Composer}, an instrument simulation
+suite that produces realistic raw data products that can be processed
+through the data-reduction and data-analysis software.
+%
+\item {\it The Accountant}: FOBOS will provide a data-reduction
+software package that provides both quick-look and science-ready,
+calibrated spectra.  This system will inherit from our teams historical connection to fiber-based packages built for SDSS and DESI.
+%
+\item {\it The Alchemist}: FOBOS will provide an automated
+data-analysis software package that provides a set of relatively
+simple, high-level measurements made from the spectra (e.g.,
+redshift), building on our experience with the MaNGA Data-Analysis
+Pipeline.
+%
+\item {\it The Curator}: FOBOS will maintain an archive of all data,
+from observation-specific metadata and raw detector output to reduced
+and higher-level data products. This is divided into two subsystems,
+the roughly static data archive provided by the Keck Observatory
+Archive (KOA) and a dynamic interface and science platform for
+visualization and analysis. The latter will be done in collaboration
+with NSF's OIR lab and its Community Science and Data Center (CSDC).
+%
+\end{enumerate}
+
+
+% From Keck?
+% - Please provide operations plans or documents (Concept of Operations). 
+% - Provide a description of the facility operations. For example: number
+%   of staff required, position types, and 24-hour operation requirements.
 % - Discuss observatory efficiency, e.g. the impact of maintenance and
 %   engineering and calibration time on faction of science time
 %   availability.
 % - Describe scope of engineering activities and time (day or night)
 %   needed to maintain calibration and health of telescope/array and
 %   instruments.
-% - Summarize key software development and any science development
-%   required.
-% - Summarize any archiving requirements. 
 % - Describe any high-level safety policies that will be required for
 %   items of particular safety concern.
-
-\noindent \textbf{Data Management System.} FOBOS requires a robust
-software suite to handle observational planning, data collection,
-processing, and serving. An API (Application Programming Interface)
-communicates between the following major sub-systems. {\it The
-Doctor}: A database of metadata and performance metrics, as well as
-analysis software, to monitor instrument health and predict
-performance. {\it The Producer}: Planning, simulation, and execution
-of integrated, multiple-pointing observing programs based on {\it
-MAISTRO}\footnote{MAISTRO: Modular Artificial Intelligence System for
-Target Reallocation and Observing.}, an ``artificial intelligence''
-(AI) targeting system that will learn optimization strategies for
-user-controlled and multi-program target assignment. {\it The
-Accountant}: A data-reduction pipeline with runtime options for both
-quick-look and science-ready reductions. {\it The Alchemist}:
-Automated derivation of high-level data products (e.g., redshifts).
-{\it The Curator}: An archive of all data and data products as well
-as a dynamic interface and science platform for visualization and
-analysis.
 
 \section{Programmatic Issues \& Schedule}
 

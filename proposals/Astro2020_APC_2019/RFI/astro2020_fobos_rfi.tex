@@ -734,31 +734,66 @@ Development Schedule    & 100 & months \\\hline
 %   construction crews and facility staff etc.).
 
 FOBOS is a fourth-generation instrument for the W.~M.\ Keck
-Observatory (WMKO). The twin WMKO telescopes are located at the top
-of Maunakea on the big island in the state of \hawaii. There is one
-building that houses the two 10 meter telescopes inside two large
-domes. In addition to the two telescopes, the facility houses a
-machine shop, electrical shop, and instrument test lab. The summit
-facility is accessed via the Maunakea access road that is the road to
-all observatories on the mountain. Power is provided by the local
-power company, HELCO and the summit has a dedicated internet
-connection. The observatory is close to both the Hilo and Kona
-airports that are under 2 hours away. Personnel may stay at the
-summit at the UH managed dormitory, or they may stay at the Waimea
-headquarters facility located 1 hour away from the Kona airport. The
-headquarters facility has four major complexes that include office
-space for roughly 100 staff, a mechanical auto shop and machining
-area, a nighttime operations area, and a visiting astronomers
-quarters. Power for the base facility is supplied by HELCO, as well
-as solar panels, and internet is available from the local supplier.
-Average summit temperatures is 0C, while the base facility is around
-70F.
+Observatory (WMKO), to be installed into the existing 10 m Keck-II
+telescope located within the scientific preserve of Maunakea on the
+Island of \hawaii, HI, at an altitude of 13,796 ft. The observatory
+consists of one building that houses the two 10 meter telescopes
+inside two large domes. In addition to the two telescopes, the
+facility houses a machine shop, electrical shop, and instrument test
+lab. The summit facility is accessed via the Maunakea access road
+that is the road to all observatories on the mountain. Power is
+provided by the local power company, HELCO and the summit has a
+dedicated internet connection. The observatory is close to both the
+Hilo and Kona airports that are under 2 hours away.
 
-The summit of Maunakea is a superb site for astronomical research
-with very few nights being cancelled due to weather conditions. There
-is a weather monitoring station at the summit and a meteorologist
-provides daily updated weather predictions. These tools are used to
-help guide nightly observation planning.
+The Keck Observatory receives an average of 205 photometric nights
+and 275 observable nights per year \citep{Morrison73} with a median
+seeing of 0.6 arc-seconds as measured as a combination of all Keck
+instruments recorded seeing over the last 15 years.\footnote{
+\url{https://www2.keck.hawaii.edu/inst/newsletters/Vol20/index.html}}
+Due to altitude and atmospheric conditions Maunakea has unmatched
+atmospheric UV transparency. As shown in Figure \ref{fig:keckuv}, the
+site provides $\gtrsim$0.4 magnitudes less extinction at an airmass
+of 1 at the FOBOS's blue limit compared to lower-altitude sites, like
+La Palma (ORM). A weather station at the summit monitors the site
+observing conditions and a meteorologist provides daily updated
+weather predictions. These tools are used to help guide nightly
+observation planning.
+
+\begin{figure}[h!]
+\vskip -0.1in
+\includegraphics[width=\textwidth]{opticalUVtrans.pdf}
+\caption{\small Atmospheric extinction in magnitudes per airmass as a
+function of wavelength for Maunakea (MKO) and La Palma (ORM).
+Courtesy W. Skidmore, private communication.}
+\label{fig:keckuv}
+\end{figure}
+
+The FOBOS instrument itself is not expected to require any changes to
+the exterior structure of the Observatory; however, there will be
+upgrades required within the existing facility. The most significant
+of these will be the addition of a dome screen; however, this
+addition is not expected to require structural changes to the dome
+itself. Also, a significant amount of support equipment will be added
+to the observatory including chillers for heat rejection, LN2
+delivery stems or closed cycle coolers, new computing hardware, and
+possible additional power and communications to the observing level
+of the Keck II telescope.
+
+FOBOS will be positioned on the Nasmyth platform. Preliminary mass
+budgets suggest there will be no need to modify any of the telescope
+structure to accommodate the instrument. All existing instrument
+operations will remain un-changed.
+
+Personnel may stay at the summit at the UH managed dormitory, or they
+may stay at the Waimea headquarters facility located 1 hour away from
+the Kona airport. The headquarters facility has four major complexes
+that include office space for roughly 100 staff, a mechanical auto
+shop and machining area, a nighttime operations area, and a visiting
+astronomers quarters. Power for the base facility is supplied by
+HELCO, as well as solar panels, and internet is available from the
+local supplier. Average summit temperatures is 0C, while the base
+facility is around 70F.
 
 % - Identify which facilities will be new and which facilities may be
 %   pre-existing. Describe any existing facilities and their estimated
@@ -780,35 +815,6 @@ technical and have a range of skill sets including software
 development, electrical engineering, mechanical engineering,
 management, and custodial.
 
-Currently, proposal preparation and observation planning is done by
-referencing documentation hosted on the observatory website and using
-software tools that, e.g., allow users to design slit masks. These
-activities are done in advance of coming to the telescope. Procedural
-documentation also exists for operating the instruments that are used
-by the visiting astronomers to acquire their data sets. For every
-observer, a staff astronomer is assigned to assist and answer
-questions prior to, during, and after executing their observing
-program. Data-reduction pipelines supported by the observatory exist
-for roughly half of the current instruments, with recent efforts from
-within the Keck community aiming to improve this (e.g., UCO's
-PypeIt). Data taken for nearly all Keck instruments is hosted by the
-Keck Observatory Archive (KOA).
-
-A small fraction of observatory operations are assigned to
-engineering. This time is used to commission new capabilities, as
-well as troubleshoot any chronic problems. Engineering time is
-assigned 6 months in advance and the dates are posted on the
-telescope observing schedule that is part of the on-line
-documentation available to the public. The observatory keeps metrics
-on the observing efficiency of the telescope. For example, the
-downtime for calibration and maintenance is just a few percent of the
-total time available. WMKO routinely recoats the 36 segments that
-make up the primary mirror of each telescope. Recoating is completed
-on both telescopes in alternate years using a coating chamber located
-in a summit facility that recoats individual segments. Typically,
-three to four segments of the primary mirror are replaced every
-month.
-
 % - Describe atmospheric and radio frequency interference (RFI)
 %   characteristics of the site insofar as they would affect observations
 %   with the concept being proposed.
@@ -829,6 +835,39 @@ month.
 %   the Operations Section. Describe the level of complexity associated
 %   with analyzing the data to achieve the scientific objectives of the
 %   investigation. Describe the types of data (e.g. bits, images).
+
+\subsection{WMKO Operations}
+
+For current WMKO instruments, procedural documentation exists for
+operating the instruments that are used by the visiting astronomers
+to acquire their data sets. For every observer, a staff astronomer is
+assigned to assist and answer questions prior to, during, and after
+executing their observing program. Data-reduction pipelines supported
+by the observatory exist for roughly half of the current instruments,
+with recent efforts from within the Keck community aiming to improve
+this (e.g., UCO's PypeIt). Data taken for nearly all Keck instruments
+is hosted by the Keck Observatory Archive (KOA).
+
+For FOBOS, we envision an end-to-end data-management system used to
+plan, execute, reduce, and analyze the observations. This system is
+described below.
+
+A small fraction of observatory operations are assigned to
+engineering. This time is used to commission new capabilities, as
+well as troubleshoot any chronic problems. Engineering time is
+assigned 6 months in advance and the dates are posted on the
+telescope observing schedule that is part of the on-line
+documentation available to the public. The observatory keeps metrics
+on the observing efficiency of the telescope. For example, the
+downtime for calibration and maintenance is just a few percent of the
+total time available. WMKO routinely recoats the 36 segments that
+make up the primary mirror of each telescope. Recoating is completed
+on both telescopes in alternate years using a coating chamber located
+in a summit facility that recoats individual segments. Typically,
+three to four segments of the primary mirror are replaced every
+month.
+
+\subsection{FOBOS Operations}
 
 FOBOS is a general-purpose, facility-class instrument that is
 expected to integrate into the existing operational structure of the
